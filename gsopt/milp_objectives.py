@@ -10,6 +10,7 @@ import pyomo.kernel as pk
 from gsopt.milp_core import ProviderNode, StationNode, ContactNode
 from gsopt.models import OptimizationWindow
 from gsopt.utils import time_milp_generation
+import statistics
 
 
 class GSOptObjective(metaclass=ABCMeta):
@@ -171,4 +172,60 @@ class MinMaxContactGapObjective(pk.block, GSOptObjective):
 
 
                 # Add constraint that only one of the auxiliary variables can be 1 if the contact node is scheduled
-                self.constraints.append(pk.constraint(expr == contact_nodes[cn_i.id].var))
+                self.constraints.append(pk.constraint(expr == contact_nodes[cn_i.id].var))  
+
+class MaxDataWithOCPObjective(pk.block, GSOptObjective):
+    """
+    Objective function that maximizes a utility function, balancing total data
+    downlinked with the operational complexity of the network. This is the
+    "Practitioner's Model".
+    """
+
+    def __init__(self, P_base: float = 500.0, **kwargs):
+        pk.block.__init__(self)
+        # Pass P_base to the GSOptObjective constructor so it's saved in self.kwargs
+        GSOptObjective.__init__(self, P_base=P_base, **kwargs)
+
+        # Set objective direction
+        self.obj.sense = pk.maximize
+        
+        # Store the strategic lever, P_base
+        self.P_base = P_base
+
+    @time_milp_generation
+    def _generate_objective(self,
+                            provider_nodes: dict[str, ProviderNode] | None = None,
+                            station_nodes: dict[str, StationNode] | None = None,
+                            contact_nodes: dict[str, ContactNode] | None = None,
+                            opt_window: OptimizationWindow | None = None, **kwargs):
+        """
+        Generate the objective function with the OCP and AOFN.
+        """
+
+        # --- 1. AOFN: Calculate the adaptive k-factor ---
+        contact_efficiencies = []
+        for cn in contact_nodes.values():
+            # Ensure cost is non-zero to avoid division errors
+            if cn.model.cost > 0:
+                efficiency = cn.model.data_volume / cn.model.cost
+                contact_efficiencies.append(efficiency)
+
+        # Use median for a robust measure of bits-per-dollar
+        if contact_efficiencies:
+            k_factor = statistics.median(contact_efficiencies)
+        else:
+            # Fallback if no contacts have cost, though unlikely.
+            k_factor = 0
+
+        # --- 2. Define the two terms of the utility function ---
+
+        # Data Term: The total data downlinked (same as baseline model)
+        data_term = sum(cn.var * cn.model.data_volume for cn in contact_nodes.values())
+
+        # OCP Term: The complexity penalty for each activated station
+        # The penalty is scaled by k_factor to make it commensurable with data
+        complexity_penalty_term = sum(self.P_base * k_factor * station_nodes[sn_id].var for sn_id in station_nodes)
+
+        # --- 3. Set the Final Objective Expression ---
+        # We scale the entire expression by T_opt/T_sim to project over the full mission
+        self.obj.expr = (data_term - complexity_penalty_term) * (opt_window.T_opt / opt_window.T_sim)

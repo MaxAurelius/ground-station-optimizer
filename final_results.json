@@ -1,0 +1,127 @@
+{
+    "config": {
+        "optimizer_engine": "cbc",
+        "num_trials": 1,
+        "base_seed": "final-validated-results-2025",
+        "output_filename": "final_results.json",
+        "pareto": {
+            "satellite_count": 1,
+            "p_base_sweep": [
+                0,
+                100,
+                250,
+                500,
+                1000,
+                2500
+            ]
+        },
+        "scalability": {
+            "satellite_counts": [
+                1
+            ],
+            "ocp_p_base": 500.0
+        },
+        "budget_constrained": {
+            "satellite_count": 1,
+            "budget_usd_per_month": 150000.0,
+            "ocp_p_base": 500.0
+        }
+    },
+    "raw_trial_data": {
+        "pareto": [
+            [
+                {
+                    "p_base": 0,
+                    "status": "optimal",
+                    "data_gb": 2218150.05947185,
+                    "cost_monthly": 514664.3199529888,
+                    "stations": 67,
+                    "providers": 7
+                },
+                {
+                    "p_base": 100,
+                    "status": "optimal",
+                    "data_gb": 2202791.239673039,
+                    "cost_monthly": 447060.6604063269,
+                    "stations": 38,
+                    "providers": 7
+                },
+                {
+                    "p_base": 250,
+                    "status": "optimal",
+                    "data_gb": 2165013.71771494,
+                    "cost_monthly": 424322.1846227746,
+                    "stations": 30,
+                    "providers": 7
+                },
+                {
+                    "p_base": 500,
+                    "status": "optimal",
+                    "data_gb": 2099742.7250300795,
+                    "cost_monthly": 400420.04892523284,
+                    "stations": 24,
+                    "providers": 7
+                },
+                {
+                    "p_base": 1000,
+                    "status": "optimal",
+                    "data_gb": 2038074.6446204355,
+                    "cost_monthly": 373924.6092920021,
+                    "stations": 21,
+                    "providers": 7
+                },
+                {
+                    "p_base": 2500,
+                    "status": "optimal",
+                    "data_gb": 1871213.3252417794,
+                    "cost_monthly": 290637.32888846943,
+                    "stations": 17,
+                    "providers": 7
+                }
+            ]
+        ],
+        "scalability": [
+            [
+                {
+                    "sat_count": 1,
+                    "limited": {
+                        "data_gb": 0,
+                        "status": "untested"
+                    },
+                    "baseline": {
+                        "status": "optimal",
+                        "data_gb": 0.0,
+                        "cost_monthly": 0.0,
+                        "stations": 0,
+                        "providers": 7
+                    },
+                    "ocp": {
+                        "status": "optimal",
+                        "data_gb": 0.0,
+                        "cost_monthly": 0.0,
+                        "stations": 0,
+                        "providers": 7
+                    }
+                }
+            ]
+        ],
+        "budget": [
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 1439771.40700692,
+                    "cost_monthly": 149988.65144089577,
+                    "stations": 16,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 1431643.8485298832,
+                    "cost_monthly": 149919.72853527166,
+                    "stations": 15,
+                    "providers": 7
+                }
+            }
+        ]
+    }
+}

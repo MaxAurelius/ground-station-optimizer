@@ -1,0 +1,2100 @@
+                    Provider Information                     
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property           ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name               │ Atlas                                │
+│ Id                 │ 7710f1ea-ecf7-41c6-a8ca-57811684ef6f │
+│ Number of Stations │ 11                                   │
+│ Integration Cost   │ $145914.02                           │
+└────────────────────┴──────────────────────────────────────┘
+                          Utqiagvik Station                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Utqiagvik                            │
+│ Id                         │ 28aff51e-b09f-407d-8982-0fe04d096115 │
+│ Provider                   │ Atlas                                │
+│ Provider Id                │ 7710f1ea-ecf7-41c6-a8ca-57811684ef6f │
+│ Longitude                  │ -156.810                             │
+│ Latitude                   │ 71.270                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $12250.97                            │
+│ Per Satellite License Cost │ $2100.12                             │
+│ Monthly Cost               │ $834.82                              │
+│ Cost per Pass              │ $36.54                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Dundee Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Dundee                               │
+│ Id                         │ 0d4ae435-bfe7-43b0-8ea8-e0110332d963 │
+│ Provider                   │ Atlas                                │
+│ Provider Id                │ 7710f1ea-ecf7-41c6-a8ca-57811684ef6f │
+│ Longitude                  │ -3.180                               │
+│ Latitude                   │ 56.400                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $12250.97                            │
+│ Per Satellite License Cost │ $2100.12                             │
+│ Monthly Cost               │ $834.82                              │
+│ Cost per Pass              │ $25.33                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Chitose Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Chitose                              │
+│ Id                         │ 583c7815-75de-43ce-92c4-0df659b59526 │
+│ Provider                   │ Atlas                                │
+│ Provider Id                │ 7710f1ea-ecf7-41c6-a8ca-57811684ef6f │
+│ Longitude                  │ 141.620                              │
+│ Latitude                   │ 42.770                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $12250.97                            │
+│ Per Satellite License Cost │ $2100.12                             │
+│ Monthly Cost               │ $834.82                              │
+│ Cost per Pass              │ $29.38                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Mojave Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Mojave                               │
+│ Id                         │ b4d032e3-4de4-4f0c-a4ce-ec2041dbe267 │
+│ Provider                   │ Atlas                                │
+│ Provider Id                │ 7710f1ea-ecf7-41c6-a8ca-57811684ef6f │
+│ Longitude                  │ -118.150                             │
+│ Latitude                   │ 35.050                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $12250.97                            │
+│ Per Satellite License Cost │ $2100.12                             │
+│ Monthly Cost               │ $834.82                              │
+│ Cost per Pass              │ $25.26                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                            Dubai Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Dubai                                │
+│ Id                         │ a6708d2f-506d-401f-9d5f-5ffd38f7029d │
+│ Provider                   │ Atlas                                │
+│ Provider Id                │ 7710f1ea-ecf7-41c6-a8ca-57811684ef6f │
+│ Longitude                  │ 55.350                               │
+│ Latitude                   │ 24.940                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $12250.97                            │
+│ Per Satellite License Cost │ $2100.12                             │
+│ Monthly Cost               │ $834.82                              │
+│ Cost per Pass              │ $39.05                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Paumalu Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Paumalu                              │
+│ Id                         │ c3f8c0aa-ea64-4d9c-b0a1-065effaef9e0 │
+│ Provider                   │ Atlas                                │
+│ Provider Id                │ 7710f1ea-ecf7-41c6-a8ca-57811684ef6f │
+│ Longitude                  │ -158.030                             │
+│ Latitude                   │ 21.670                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $12250.97                            │
+│ Per Satellite License Cost │ $2100.12                             │
+│ Monthly Cost               │ $834.82                              │
+│ Cost per Pass              │ $35.63                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Harmon Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Harmon                               │
+│ Id                         │ 753ef5a8-0baf-4e0a-bb18-93785226b0a5 │
+│ Provider                   │ Atlas                                │
+│ Provider Id                │ 7710f1ea-ecf7-41c6-a8ca-57811684ef6f │
+│ Longitude                  │ 144.820                              │
+│ Latitude                   │ 13.510                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $12250.97                            │
+│ Per Satellite License Cost │ $2100.12                             │
+│ Monthly Cost               │ $834.82                              │
+│ Cost per Pass              │ $33.71                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Sunyani Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Sunyani                              │
+│ Id                         │ 85e3efd2-29b1-4628-93e4-e84d043aed4c │
+│ Provider                   │ Atlas                                │
+│ Provider Id                │ 7710f1ea-ecf7-41c6-a8ca-57811684ef6f │
+│ Longitude                  │ -2.340                               │
+│ Latitude                   │ 7.340                                │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $12250.97                            │
+│ Per Satellite License Cost │ $2100.12                             │
+│ Monthly Cost               │ $834.82                              │
+│ Cost per Pass              │ $40.92                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Mwulire Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Mwulire                              │
+│ Id                         │ 5d822585-9ee1-4dbf-98c9-af3bff81f7ef │
+│ Provider                   │ Atlas                                │
+│ Provider Id                │ 7710f1ea-ecf7-41c6-a8ca-57811684ef6f │
+│ Longitude                  │ 30.390                               │
+│ Latitude                   │ -1.960                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $12250.97                            │
+│ Per Satellite License Cost │ $2100.12                             │
+│ Monthly Cost               │ $834.82                              │
+│ Cost per Pass              │ $39.91                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Tahiti Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Tahiti                               │
+│ Id                         │ 20d4ff79-c563-468c-91ce-362e24e26a73 │
+│ Provider                   │ Atlas                                │
+│ Provider Id                │ 7710f1ea-ecf7-41c6-a8ca-57811684ef6f │
+│ Longitude                  │ -149.600                             │
+│ Latitude                   │ -17.630                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $12250.97                            │
+│ Per Satellite License Cost │ $2100.12                             │
+│ Monthly Cost               │ $834.82                              │
+│ Cost per Pass              │ $38.69                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Awarua Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Awarua                               │
+│ Id                         │ 068e957b-7e54-4117-9a67-f2deeeb4efbe │
+│ Provider                   │ Atlas                                │
+│ Provider Id                │ 7710f1ea-ecf7-41c6-a8ca-57811684ef6f │
+│ Longitude                  │ 168.380                              │
+│ Latitude                   │ -46.520                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $12250.97                            │
+│ Per Satellite License Cost │ $2100.12                             │
+│ Monthly Cost               │ $834.82                              │
+│ Cost per Pass              │ $30.29                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                    Provider Information                     
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property           ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name               │ KSAT                                 │
+│ Id                 │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Number of Stations │ 36                                   │
+│ Integration Cost   │ $82297.06                            │
+└────────────────────┴──────────────────────────────────────┘
+                         Prudhoe bay Station                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Prudhoe Bay                          │
+│ Id                         │ e3eb2bfe-526b-4d3b-ab4c-36ae6ef63303 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ -148.470                             │
+│ Latitude                   │ 70.200                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $13.77                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Athens Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Athens                               │
+│ Id                         │ 1a8bcf45-2f58-43ce-ba87-875eeb028596 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ 22.620                               │
+│ Latitude                   │ 37.850                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $7.72                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Awarua Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Awarua                               │
+│ Id                         │ ee4d65bf-838e-482b-8830-d5220facbb7f │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ 168.380                              │
+│ Latitude                   │ -46.530                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $7.26                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Azores Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Azores                               │
+│ Id                         │ 6ad5ae39-f64f-4096-b46f-d4dd47d8bf4a │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ -25.130                              │
+│ Latitude                   │ 36.990                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $14.77                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Bangalore Station                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Bangalore                            │
+│ Id                         │ 37b6378a-c09f-4a47-b23e-8b0adbf1d021 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ 77.370                               │
+│ Latitude                   │ 12.900                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $15.33                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                         Long beach Station                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Long Beach                           │
+│ Id                         │ 61718ff7-06c6-4d27-bdce-367c7d46c369 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ -118.150                             │
+│ Latitude                   │ 33.820                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $12.24                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Cordoba Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Cordoba                              │
+│ Id                         │ 004a5e26-10ba-4aa7-8cee-625011a375e8 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ -66.100                              │
+│ Latitude                   │ -33.200                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $7.17                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                            Dubai Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Dubai                                │
+│ Id                         │ 234db4a1-a465-4692-a1ea-501f4eaac2f0 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ 55.470                               │
+│ Latitude                   │ 25.230                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $8.75                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Fairbanks Station                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Fairbanks                            │
+│ Id                         │ e75685c2-f364-4636-9011-f47dd8a5f857 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ -147.720                             │
+│ Latitude                   │ 64.820                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $16.32                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                            Miami Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Miami                                │
+│ Id                         │ ee4d6079-a41d-4f9c-8d1d-1961de896e5e │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ -80.380                              │
+│ Latitude                   │ 25.610                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $15.14                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Thomaston Station                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Thomaston                            │
+│ Id                         │ e890ab4c-cdb4-4de3-aa76-5b6f8368f9eb │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ -84.260                              │
+│ Latitude                   │ 32.950                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $9.25                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                       Hartebeesthoek Station                        
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Hartebeesthoek                       │
+│ Id                         │ b8364cf4-5f16-4154-a543-8dfce8a0b9b8 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ 27.710                               │
+│ Latitude                   │ -25.890                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $14.81                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Hawaii Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Hawaii                               │
+│ Id                         │ f7451954-c1bc-4f00-94ce-731dccafc651 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ -156.450                             │
+│ Latitude                   │ 20.820                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $10.17                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Hokkaido Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Hokkaido                             │
+│ Id                         │ 99179e38-d967-45c6-9192-2d873e47a8a8 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ 143.450                              │
+│ Latitude                   │ 42.600                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $13.17                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Inuvik Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Inuvik                               │
+│ Id                         │ db54cdc8-a9de-49d1-abe0-3fec2370717d │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ -133.610                             │
+│ Latitude                   │ 68.330                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $15.84                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Jan mayen Station                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Jan Mayen                            │
+│ Id                         │ d74f357c-c135-44e8-b8db-98bb6cf83934 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ -8.720                               │
+│ Latitude                   │ 70.920                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $7.19                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                            Jeju Station                             
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Jeju                                 │
+│ Id                         │ 0e77d9af-da1a-49bc-a806-467bcdd6563c │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ 126.320                              │
+│ Latitude                   │ 33.390                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $8.18                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Kourou Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Kourou                               │
+│ Id                         │ 47070cc6-7d3c-4e4a-87fe-adbfaabd18d3 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ -52.800                              │
+│ Latitude                   │ 5.250                                │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $8.92                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                         Maspalomas Station                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Maspalomas                           │
+│ Id                         │ a2dac81f-e810-48ae-b48b-789497850ae3 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ -15.640                              │
+│ Latitude                   │ 27.770                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $10.27                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Mauritius Station                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Mauritius                            │
+│ Id                         │ 7d306e69-0cca-4ed8-a50e-dee322f5df95 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ 57.450                               │
+│ Latitude                   │ -20.500                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $13.35                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Mingenew Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Mingenew                             │
+│ Id                         │ a85ea002-6dc4-417a-89d5-a2f6972dc99b │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ 115.340                              │
+│ Latitude                   │ -29.010                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $13.32                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                            Nuuk Station                             
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Nuuk                                 │
+│ Id                         │ b14043b4-2d1e-4cd2-8a73-3c1566810c30 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ -51.700                              │
+│ Latitude                   │ 64.190                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $8.76                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Okinawa Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Okinawa                              │
+│ Id                         │ 07317605-246f-4b1a-a94b-a044837ad95e │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ 127.810                              │
+│ Latitude                   │ 26.360                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $14.52                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                        Peterborough Station                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Peterborough                         │
+│ Id                         │ 5ded8d8d-7a9a-410f-ac10-08e65acd5a1b │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ 138.850                              │
+│ Latitude                   │ -32.960                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $9.15                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                         Puertollano Station                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Puertollano                          │
+│ Id                         │ 618c51d7-9bc1-4a98-9008-140738f4adb1 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ -4.160                               │
+│ Latitude                   │ 38.670                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $15.60                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                        Punta arenas Station                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Punta Arenas                         │
+│ Id                         │ 5b54a088-0d1f-4b06-a013-fb5859a01a36 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ -70.870                              │
+│ Latitude                   │ -52.940                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $15.24                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Singapore Station                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Singapore                            │
+│ Id                         │ 0a3c3fe8-a8da-47ed-a905-d83286bf71cf │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ 103.700                              │
+│ Latitude                   │ 1.320                                │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $8.60                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Svalbard Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Svalbard                             │
+│ Id                         │ 88b4ce9d-8998-4c1f-a1ea-d2f57dc3795d │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ 15.410                               │
+│ Latitude                   │ 78.230                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $10.43                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                         Thermopylae Station                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Thermopylae                          │
+│ Id                         │ 9cbacb33-8e55-499a-badf-844b1b9e9dc7 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ 22.690                               │
+│ Latitude                   │ 38.820                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $11.06                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                            Tokyo Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Tokyo                                │
+│ Id                         │ 83bb6686-708c-42ef-ba90-9a6c9bd54253 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ 139.350                              │
+│ Latitude                   │ 36.000                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $7.87                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Tolhuin Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Tolhuin                              │
+│ Id                         │ 6c4fcd04-fdb4-43e3-bde8-4763401b4b68 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ -67.120                              │
+│ Latitude                   │ -54.510                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $12.09                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                            Troll Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Troll                                │
+│ Id                         │ 19e87a5e-a513-4ac5-8f2e-680ca2de53da │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ 2.530                                │
+│ Latitude                   │ -72.000                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $13.94                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Tromso Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Tromso                               │
+│ Id                         │ cab453a4-2d4f-43da-89fb-4e6e5c4ad9a7 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ 18.950                               │
+│ Latitude                   │ 69.660                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $15.45                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Tuskuba Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Tuskuba                              │
+│ Id                         │ af625df2-c581-40aa-ad59-42ba05e9747c │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ 140.080                              │
+│ Latitude                   │ 36.130                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $10.09                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                            Vardo Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Vardo                                │
+│ Id                         │ fac0f44c-abcb-420a-9e10-33ffad2a8af9 │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ 31.030                               │
+│ Latitude                   │ 70.340                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $11.57                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Weilheim Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Weilheim                             │
+│ Id                         │ 887809d7-495f-4c00-aec5-87d5d82d722b │
+│ Provider                   │ KSAT                                 │
+│ Provider Id                │ 5c6c069f-3b57-4964-a944-469e1364f61c │
+│ Longitude                  │ 11.080                               │
+│ Latitude                   │ 47.880                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $78714.47                            │
+│ Per Satellite License Cost │ $1408.84                             │
+│ Monthly Cost               │ $1069.89                             │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $14.03                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                    Provider Information                     
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property           ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name               │ Viasat                               │
+│ Id                 │ 6368c463-097b-4ec5-9f3c-c2adb12905d1 │
+│ Number of Stations │ 9                                    │
+│ Integration Cost   │ $179165.44                           │
+└────────────────────┴──────────────────────────────────────┘
+                            Accra Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Accra                                │
+│ Id                         │ cd343042-ccb8-4aea-8c71-d535e4d74b0f │
+│ Provider                   │ Viasat                               │
+│ Provider Id                │ 6368c463-097b-4ec5-9f3c-c2adb12905d1 │
+│ Longitude                  │ -0.300                               │
+│ Latitude                   │ 5.600                                │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $23755.72                            │
+│ Per Satellite License Cost │ $1639.93                             │
+│ Monthly Cost               │ $1520.72                             │
+│ Cost per Pass              │ $32.51                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                        Alice springs Station                        
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Alice Springs                        │
+│ Id                         │ b702d2e7-079b-4fd5-b0ef-8dd131debb43 │
+│ Provider                   │ Viasat                               │
+│ Provider Id                │ 6368c463-097b-4ec5-9f3c-c2adb12905d1 │
+│ Longitude                  │ 133.880                              │
+│ Latitude                   │ -23.760                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $23755.72                            │
+│ Per Satellite License Cost │ $1639.93                             │
+│ Monthly Cost               │ $1520.72                             │
+│ Cost per Pass              │ $39.14                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Cordoba Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Cordoba                              │
+│ Id                         │ 99e0f78b-bee3-458b-868c-771edb7b8a4a │
+│ Provider                   │ Viasat                               │
+│ Provider Id                │ 6368c463-097b-4ec5-9f3c-c2adb12905d1 │
+│ Longitude                  │ -64.460                              │
+│ Latitude                   │ -31.520                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $23755.72                            │
+│ Per Satellite License Cost │ $1639.93                             │
+│ Monthly Cost               │ $1520.72                             │
+│ Cost per Pass              │ $35.53                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Fairbanks Station                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Fairbanks                            │
+│ Id                         │ 271c0aae-034a-48ec-87d1-02164f1aa7a0 │
+│ Provider                   │ Viasat                               │
+│ Provider Id                │ 6368c463-097b-4ec5-9f3c-c2adb12905d1 │
+│ Longitude                  │ -147.540                             │
+│ Latitude                   │ 64.790                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $23755.72                            │
+│ Per Satellite License Cost │ $1639.93                             │
+│ Monthly Cost               │ $1520.72                             │
+│ Cost per Pass              │ $35.56                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Guildford Station                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Guildford                            │
+│ Id                         │ 5cb0fa19-cb15-4487-b16b-f0c55dd4baa9 │
+│ Provider                   │ Viasat                               │
+│ Provider Id                │ 6368c463-097b-4ec5-9f3c-c2adb12905d1 │
+│ Longitude                  │ -0.620                               │
+│ Latitude                   │ 51.240                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $23755.72                            │
+│ Per Satellite License Cost │ $1639.93                             │
+│ Monthly Cost               │ $1520.72                             │
+│ Cost per Pass              │ $36.95                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Hokkaido Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Hokkaido                             │
+│ Id                         │ 99bec11f-3541-4098-b923-3f68e0b8463b │
+│ Provider                   │ Viasat                               │
+│ Provider Id                │ 6368c463-097b-4ec5-9f3c-c2adb12905d1 │
+│ Longitude                  │ 143.450                              │
+│ Latitude                   │ 42.590                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $23755.72                            │
+│ Per Satellite License Cost │ $1639.93                             │
+│ Monthly Cost               │ $1520.72                             │
+│ Cost per Pass              │ $28.73                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                         Krugersdorp Station                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Krugersdorp                          │
+│ Id                         │ 5dae6bd7-f54c-458a-919a-fcdf5e39e511 │
+│ Provider                   │ Viasat                               │
+│ Provider Id                │ 6368c463-097b-4ec5-9f3c-c2adb12905d1 │
+│ Longitude                  │ 27.700                               │
+│ Latitude                   │ -25.880                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $23755.72                            │
+│ Per Satellite License Cost │ $1639.93                             │
+│ Monthly Cost               │ $1520.72                             │
+│ Cost per Pass              │ $30.62                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                         Pendergrass Station                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Pendergrass                          │
+│ Id                         │ 34a51987-0437-47b8-8f38-57a7003f9b6b │
+│ Provider                   │ Viasat                               │
+│ Provider Id                │ 6368c463-097b-4ec5-9f3c-c2adb12905d1 │
+│ Longitude                  │ -83.670                              │
+│ Latitude                   │ 34.180                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $23755.72                            │
+│ Per Satellite License Cost │ $1639.93                             │
+│ Monthly Cost               │ $1520.72                             │
+│ Cost per Pass              │ $21.99                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                            Pieta Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Pieta                                │
+│ Id                         │ 8430c48e-b86f-42c7-9825-a05ae67c0d5d │
+│ Provider                   │ Viasat                               │
+│ Provider Id                │ 6368c463-097b-4ec5-9f3c-c2adb12905d1 │
+│ Longitude                  │ 21.420                               │
+│ Latitude                   │ 65.330                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $23755.72                            │
+│ Per Satellite License Cost │ $1639.93                             │
+│ Monthly Cost               │ $1520.72                             │
+│ Cost per Pass              │ $39.45                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                    Provider Information                     
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property           ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name               │ Aws                                  │
+│ Id                 │ f4d1a609-f16c-497a-9ea1-b446bdd3aa42 │
+│ Number of Stations │ 12                                   │
+│ Integration Cost   │ $89508.36                            │
+└────────────────────┴──────────────────────────────────────┘
+                           Alaska Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Alaska                               │
+│ Id                         │ 6baef159-968b-4a34-ab2b-adc010d3a1fd │
+│ Provider                   │ Aws                                  │
+│ Provider Id                │ f4d1a609-f16c-497a-9ea1-b446bdd3aa42 │
+│ Longitude                  │ -149.900                             │
+│ Latitude                   │ 71.290                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $55052.75                            │
+│ Per Satellite License Cost │ $1714.61                             │
+│ Monthly Cost               │ $1868.94                             │
+│ Cost per Pass              │ $31.39                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Oregon Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Oregon                               │
+│ Id                         │ c58b35e5-b91a-453e-ad4a-3ecad9430194 │
+│ Provider                   │ Aws                                  │
+│ Provider Id                │ f4d1a609-f16c-497a-9ea1-b446bdd3aa42 │
+│ Longitude                  │ -119.370                             │
+│ Latitude                   │ 45.510                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $55052.75                            │
+│ Per Satellite License Cost │ $1714.61                             │
+│ Monthly Cost               │ $1868.94                             │
+│ Cost per Pass              │ $42.66                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                            Ohio Station                             
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Ohio                                 │
+│ Id                         │ bf8ce84a-888c-4358-92db-08b6e3981d69 │
+│ Provider                   │ Aws                                  │
+│ Provider Id                │ f4d1a609-f16c-497a-9ea1-b446bdd3aa42 │
+│ Longitude                  │ -83.120                              │
+│ Latitude                   │ 40.060                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $55052.75                            │
+│ Per Satellite License Cost │ $1714.61                             │
+│ Monthly Cost               │ $1868.94                             │
+│ Cost per Pass              │ $46.48                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Hawaii Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Hawaii                               │
+│ Id                         │ 0524f607-b573-4dfa-bad9-76ded59f5c10 │
+│ Provider                   │ Aws                                  │
+│ Provider Id                │ f4d1a609-f16c-497a-9ea1-b446bdd3aa42 │
+│ Longitude                  │ -157.840                             │
+│ Latitude                   │ 21.320                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $55052.75                            │
+│ Per Satellite License Cost │ $1714.61                             │
+│ Monthly Cost               │ $1868.94                             │
+│ Cost per Pass              │ $45.78                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                        Punta arenas Station                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Punta Arenas                         │
+│ Id                         │ 79d8f451-7e58-44cd-8d85-e9d3392f5198 │
+│ Provider                   │ Aws                                  │
+│ Provider Id                │ f4d1a609-f16c-497a-9ea1-b446bdd3aa42 │
+│ Longitude                  │ -70.870                              │
+│ Latitude                   │ -52.940                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $55052.75                            │
+│ Per Satellite License Cost │ $1714.61                             │
+│ Monthly Cost               │ $1868.94                             │
+│ Cost per Pass              │ $33.89                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Ireland Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Ireland                              │
+│ Id                         │ 913501b9-0ae7-4ea5-a788-0f0a9009cbc4 │
+│ Provider                   │ Aws                                  │
+│ Provider Id                │ f4d1a609-f16c-497a-9ea1-b446bdd3aa42 │
+│ Longitude                  │ -6.130                               │
+│ Latitude                   │ 53.240                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $55052.75                            │
+│ Per Satellite License Cost │ $1714.61                             │
+│ Monthly Cost               │ $1868.94                             │
+│ Cost per Pass              │ $29.65                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Stockholm Station                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Stockholm                            │
+│ Id                         │ fe9d7686-6477-489a-8a8d-5906441ac962 │
+│ Provider                   │ Aws                                  │
+│ Provider Id                │ f4d1a609-f16c-497a-9ea1-b446bdd3aa42 │
+│ Longitude                  │ 16.350                               │
+│ Latitude                   │ 59.390                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $55052.75                            │
+│ Per Satellite License Cost │ $1714.61                             │
+│ Monthly Cost               │ $1868.94                             │
+│ Cost per Pass              │ $44.98                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Bahrain Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Bahrain                              │
+│ Id                         │ dd29e8cb-97c9-4c41-977f-cb242baf25d9 │
+│ Provider                   │ Aws                                  │
+│ Provider Id                │ f4d1a609-f16c-497a-9ea1-b446bdd3aa42 │
+│ Longitude                  │ 50.300                               │
+│ Latitude                   │ 26.030                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $55052.75                            │
+│ Per Satellite License Cost │ $1714.61                             │
+│ Monthly Cost               │ $1868.94                             │
+│ Cost per Pass              │ $32.20                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Cape town Station                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Cape Town                            │
+│ Id                         │ 2f5be3aa-6b56-46f0-91ad-9e07f5135b8f │
+│ Provider                   │ Aws                                  │
+│ Provider Id                │ f4d1a609-f16c-497a-9ea1-b446bdd3aa42 │
+│ Longitude                  │ 18.430                               │
+│ Latitude                   │ -34.010                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $55052.75                            │
+│ Per Satellite License Cost │ $1714.61                             │
+│ Monthly Cost               │ $1868.94                             │
+│ Cost per Pass              │ $44.97                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                            Seoul Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Seoul                                │
+│ Id                         │ 5aa97fa5-e828-48e2-a163-370b09f19aa6 │
+│ Provider                   │ Aws                                  │
+│ Provider Id                │ f4d1a609-f16c-497a-9ea1-b446bdd3aa42 │
+│ Longitude                  │ 127.020                              │
+│ Latitude                   │ 36.740                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $55052.75                            │
+│ Per Satellite License Cost │ $1714.61                             │
+│ Monthly Cost               │ $1868.94                             │
+│ Cost per Pass              │ $29.12                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Singapore Station                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Singapore                            │
+│ Id                         │ db3f5a55-6585-4672-9e66-b2f49605f82a │
+│ Provider                   │ Aws                                  │
+│ Provider Id                │ f4d1a609-f16c-497a-9ea1-b446bdd3aa42 │
+│ Longitude                  │ 103.700                              │
+│ Latitude                   │ 1.310                                │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $55052.75                            │
+│ Per Satellite License Cost │ $1714.61                             │
+│ Monthly Cost               │ $1868.94                             │
+│ Cost per Pass              │ $43.73                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                            Dubbo Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Dubbo                                │
+│ Id                         │ 0cc3f44c-cf13-4d73-810e-77aee5ec22dd │
+│ Provider                   │ Aws                                  │
+│ Provider Id                │ f4d1a609-f16c-497a-9ea1-b446bdd3aa42 │
+│ Longitude                  │ 148.620                              │
+│ Latitude                   │ -32.180                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $55052.75                            │
+│ Per Satellite License Cost │ $1714.61                             │
+│ Monthly Cost               │ $1868.94                             │
+│ Cost per Pass              │ $42.73                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                    Provider Information                     
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property           ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name               │ Azure                                │
+│ Id                 │ 904d4d07-c0ba-4d4d-a654-e10a33101191 │
+│ Number of Stations │ 5                                    │
+│ Integration Cost   │ $69258.72                            │
+└────────────────────┴──────────────────────────────────────┘
+                           Quincy Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Quincy                               │
+│ Id                         │ fde97cb3-1238-451f-bb70-4e580b1818f7 │
+│ Provider                   │ Azure                                │
+│ Provider Id                │ 904d4d07-c0ba-4d4d-a654-e10a33101191 │
+│ Longitude                  │ -119.860                             │
+│ Latitude                   │ 47.240                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $52775.41                            │
+│ Per Satellite License Cost │ $3199.21                             │
+│ Monthly Cost               │ $897.58                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $15.05                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Longovilo Station                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Longovilo                            │
+│ Id                         │ fbe28d19-c9d5-4730-8158-94488df8e8ff │
+│ Provider                   │ Azure                                │
+│ Provider Id                │ 904d4d07-c0ba-4d4d-a654-e10a33101191 │
+│ Longitude                  │ -71.400                              │
+│ Latitude                   │ -33.960                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $52775.41                            │
+│ Per Satellite License Cost │ $3199.21                             │
+│ Monthly Cost               │ $897.58                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $9.51                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Singapore Station                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Singapore                            │
+│ Id                         │ a6e4e431-e011-4144-a8c6-01e35f70c89d │
+│ Provider                   │ Azure                                │
+│ Provider Id                │ 904d4d07-c0ba-4d4d-a654-e10a33101191 │
+│ Longitude                  │ 103.850                              │
+│ Latitude                   │ 1.280                                │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $52775.41                            │
+│ Per Satellite License Cost │ $3199.21                             │
+│ Monthly Cost               │ $897.58                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $11.49                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                        Johannesburg Station                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Johannesburg                         │
+│ Id                         │ 01d93196-e966-479d-bcad-e831c882bafb │
+│ Provider                   │ Azure                                │
+│ Provider Id                │ 904d4d07-c0ba-4d4d-a654-e10a33101191 │
+│ Longitude                  │ 28.200                               │
+│ Latitude                   │ -26.140                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $52775.41                            │
+│ Per Satellite License Cost │ $3199.21                             │
+│ Monthly Cost               │ $897.58                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $14.00                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                            Gavle Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Gavle                                │
+│ Id                         │ 582fe0d6-9217-4cce-8a23-7065272c2ca1 │
+│ Provider                   │ Azure                                │
+│ Provider Id                │ 904d4d07-c0ba-4d4d-a654-e10a33101191 │
+│ Longitude                  │ 17.140                               │
+│ Latitude                   │ 60.630                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $52775.41                            │
+│ Per Satellite License Cost │ $3199.21                             │
+│ Monthly Cost               │ $897.58                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $16.50                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                    Provider Information                     
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property           ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name               │ Leaf Space                           │
+│ Id                 │ e95c3cc0-c9ab-42dd-80a1-73e1d6da482e │
+│ Number of Stations │ 18                                   │
+│ Integration Cost   │ $117722.92                           │
+└────────────────────┴──────────────────────────────────────┘
+                           Awarua Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Awarua                               │
+│ Id                         │ 2e3db194-e593-4965-a967-33a8010b2c61 │
+│ Provider                   │ Leaf Space                           │
+│ Provider Id                │ e95c3cc0-c9ab-42dd-80a1-73e1d6da482e │
+│ Longitude                  │ 168.380                              │
+│ Latitude                   │ -46.530                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $32311.51                            │
+│ Per Satellite License Cost │ $1256.10                             │
+│ Monthly Cost               │ $531.55                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $15.96                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                        Peterborough Station                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Peterborough                         │
+│ Id                         │ 1b0a304f-cb91-4133-8e7a-d257a425ec6d │
+│ Provider                   │ Leaf Space                           │
+│ Provider Id                │ e95c3cc0-c9ab-42dd-80a1-73e1d6da482e │
+│ Longitude                  │ 138.850                              │
+│ Latitude                   │ -32.960                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $32311.51                            │
+│ Per Satellite License Cost │ $1256.10                             │
+│ Monthly Cost               │ $531.55                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $10.32                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Nangetty Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Nangetty                             │
+│ Id                         │ 439a0206-6c71-438a-a9ed-5e8ea2f3cb64 │
+│ Provider                   │ Leaf Space                           │
+│ Provider Id                │ e95c3cc0-c9ab-42dd-80a1-73e1d6da482e │
+│ Longitude                  │ 115.340                              │
+│ Latitude                   │ -29.010                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $32311.51                            │
+│ Per Satellite License Cost │ $1256.10                             │
+│ Monthly Cost               │ $531.55                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $18.25                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                            Kandy Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Kandy                                │
+│ Id                         │ 2cb8f241-aa4a-4e0c-b402-ae27b6b6d5f0 │
+│ Provider                   │ Leaf Space                           │
+│ Provider Id                │ e95c3cc0-c9ab-42dd-80a1-73e1d6da482e │
+│ Longitude                  │ 80.720                               │
+│ Latitude                   │ 7.270                                │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $32311.51                            │
+│ Per Satellite License Cost │ $1256.10                             │
+│ Monthly Cost               │ $531.55                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $14.79                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Absheron Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Absheron                             │
+│ Id                         │ 971f633d-60df-4ed1-a19e-7b24bd4a9138 │
+│ Provider                   │ Leaf Space                           │
+│ Provider Id                │ e95c3cc0-c9ab-42dd-80a1-73e1d6da482e │
+│ Longitude                  │ 49.490                               │
+│ Latitude                   │ 40.470                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $32311.51                            │
+│ Per Satellite License Cost │ $1256.10                             │
+│ Monthly Cost               │ $531.55                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $16.34                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           Lomazzo Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Lomazzo                              │
+│ Id                         │ 155d4465-5325-49a0-ba2f-664353f8d530 │
+│ Provider                   │ Leaf Space                           │
+│ Provider Id                │ e95c3cc0-c9ab-42dd-80a1-73e1d6da482e │
+│ Longitude                  │ 9.040                                │
+│ Latitude                   │ 45.700                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $32311.51                            │
+│ Per Satellite License Cost │ $1256.10                             │
+│ Monthly Cost               │ $531.55                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $15.04                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                            Unst Station                             
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ UNST                                 │
+│ Id                         │ 6e7d1115-fd68-4cea-a8b3-3ef88aabfb18 │
+│ Provider                   │ Leaf Space                           │
+│ Provider Id                │ e95c3cc0-c9ab-42dd-80a1-73e1d6da482e │
+│ Longitude                  │ -0.860                               │
+│ Latitude                   │ 60.750                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $32311.51                            │
+│ Per Satellite License Cost │ $1256.10                             │
+│ Monthly Cost               │ $531.55                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $19.00                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                         Puertollano Station                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Puertollano                          │
+│ Id                         │ 8a648e53-1a57-4bdf-8422-c1ccd0df2468 │
+│ Provider                   │ Leaf Space                           │
+│ Provider Id                │ e95c3cc0-c9ab-42dd-80a1-73e1d6da482e │
+│ Longitude                  │ -4.160                               │
+│ Latitude                   │ 38.670                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $32311.51                            │
+│ Per Satellite License Cost │ $1256.10                             │
+│ Monthly Cost               │ $531.55                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $15.41                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Blonduos Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Blonduos                             │
+│ Id                         │ 1928b2f2-f7ed-45dd-befc-cd958b565cd0 │
+│ Provider                   │ Leaf Space                           │
+│ Provider Id                │ e95c3cc0-c9ab-42dd-80a1-73e1d6da482e │
+│ Longitude                  │ -20.240                              │
+│ Latitude                   │ 65.650                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $32311.51                            │
+│ Per Satellite License Cost │ $1256.10                             │
+│ Monthly Cost               │ $531.55                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $17.50                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                         Santa maria Station                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Santa Maria                          │
+│ Id                         │ b8f846ae-b839-4258-862d-9bf68cb8ae74 │
+│ Provider                   │ Leaf Space                           │
+│ Provider Id                │ e95c3cc0-c9ab-42dd-80a1-73e1d6da482e │
+│ Longitude                  │ -25.140                              │
+│ Latitude                   │ 37.000                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $32311.51                            │
+│ Per Satellite License Cost │ $1256.10                             │
+│ Monthly Cost               │ $531.55                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $11.55                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Kaspichan Station                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Kaspichan                            │
+│ Id                         │ 461f5602-5730-4771-b3b0-348f0daf1de1 │
+│ Provider                   │ Leaf Space                           │
+│ Provider Id                │ e95c3cc0-c9ab-42dd-80a1-73e1d6da482e │
+│ Longitude                  │ 27.160                               │
+│ Latitude                   │ 43.310                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $32311.51                            │
+│ Per Satellite License Cost │ $1256.10                             │
+│ Monthly Cost               │ $531.55                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $16.24                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                            Plana Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Plana                                │
+│ Id                         │ 9fce2f59-83b5-4757-8a5a-d7efc6ee856c │
+│ Provider                   │ Leaf Space                           │
+│ Provider Id                │ e95c3cc0-c9ab-42dd-80a1-73e1d6da482e │
+│ Longitude                  │ 23.450                               │
+│ Latitude                   │ 42.480                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $32311.51                            │
+│ Per Satellite License Cost │ $1256.10                             │
+│ Monthly Cost               │ $531.55                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $13.89                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                        Punta arenas Station                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Punta Arenas                         │
+│ Id                         │ 20c21850-c0d6-45d4-96da-e9077170b7ba │
+│ Provider                   │ Leaf Space                           │
+│ Provider Id                │ e95c3cc0-c9ab-42dd-80a1-73e1d6da482e │
+│ Longitude                  │ -70.850                              │
+│ Latitude                   │ -53.040                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $32311.51                            │
+│ Per Satellite License Cost │ $1256.10                             │
+│ Monthly Cost               │ $531.55                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $18.29                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Vimercate Station                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Vimercate                            │
+│ Id                         │ 7546c2fa-8e3d-4a38-b226-0aa058bd7f1e │
+│ Provider                   │ Leaf Space                           │
+│ Provider Id                │ e95c3cc0-c9ab-42dd-80a1-73e1d6da482e │
+│ Longitude                  │ 9.360                                │
+│ Latitude                   │ 45.590                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $32311.51                            │
+│ Per Satellite License Cost │ $1256.10                             │
+│ Monthly Cost               │ $531.55                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $16.38                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Jeju city Station                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Jeju City                            │
+│ Id                         │ d7d61dc0-5bdf-46e0-ae28-8ab64c6ad037 │
+│ Provider                   │ Leaf Space                           │
+│ Provider Id                │ e95c3cc0-c9ab-42dd-80a1-73e1d6da482e │
+│ Longitude                  │ 126.320                              │
+│ Latitude                   │ 33.390                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $32311.51                            │
+│ Per Satellite License Cost │ $1256.10                             │
+│ Monthly Cost               │ $531.55                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $10.63                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                         Mon loisir Station                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Mon Loisir                           │
+│ Id                         │ d305987e-1344-44a7-a8c8-c47860501b36 │
+│ Provider                   │ Leaf Space                           │
+│ Provider Id                │ e95c3cc0-c9ab-42dd-80a1-73e1d6da482e │
+│ Longitude                  │ 57.870                               │
+│ Latitude                   │ -20.140                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $32311.51                            │
+│ Per Satellite License Cost │ $1256.10                             │
+│ Monthly Cost               │ $531.55                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $16.93                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                           La paz Station                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ La Paz                               │
+│ Id                         │ fa3e0c70-cec2-4a89-b48b-1f26e90a1bdf │
+│ Provider                   │ Leaf Space                           │
+│ Provider Id                │ e95c3cc0-c9ab-42dd-80a1-73e1d6da482e │
+│ Longitude                  │ -110.390                             │
+│ Latitude                   │ 24.100                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $32311.51                            │
+│ Per Satellite License Cost │ $1256.10                             │
+│ Monthly Cost               │ $531.55                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $12.14                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                          Pretoria Station                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Pretoria                             │
+│ Id                         │ f8c01327-e4f4-4db9-8e06-e2bbcb81bc23 │
+│ Provider                   │ Leaf Space                           │
+│ Provider Id                │ e95c3cc0-c9ab-42dd-80a1-73e1d6da482e │
+│ Longitude                  │ 28.450                               │
+│ Latitude                   │ -25.860                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $32311.51                            │
+│ Per Satellite License Cost │ $1256.10                             │
+│ Monthly Cost               │ $531.55                              │
+│ Cost per Pass              │ $0.00                                │
+│ Cost per Minute            │ $15.01                               │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                    Provider Information                     
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property           ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name               │ ssc                                  │
+│ Id                 │ 7e5a01cd-3141-4ac3-a1be-e5fcbee92a3a │
+│ Number of Stations │ 10                                   │
+│ Integration Cost   │ $71027.34                            │
+└────────────────────┴──────────────────────────────────────┘
+                 Clewiston satellite station Station                 
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Clewiston Satellite Station          │
+│ Id                         │ a6892ca3-989b-4606-8b73-a33aeb06d368 │
+│ Provider                   │ ssc                                  │
+│ Provider Id                │ 7e5a01cd-3141-4ac3-a1be-e5fcbee92a3a │
+│ Longitude                  │ -81.033                              │
+│ Latitude                   │ 26.733                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $26513.92                            │
+│ Per Satellite License Cost │ $2850.51                             │
+│ Monthly Cost               │ $1811.73                             │
+│ Cost per Pass              │ $12.52                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                North pole satellite station Station                 
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ North Pole Satellite Station         │
+│ Id                         │ 5ad97b5f-782c-4670-a2a1-18baddeee75d │
+│ Provider                   │ ssc                                  │
+│ Provider Id                │ 7e5a01cd-3141-4ac3-a1be-e5fcbee92a3a │
+│ Longitude                  │ -147.650                             │
+│ Latitude                   │ 64.800                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $26513.92                            │
+│ Per Satellite License Cost │ $2850.51                             │
+│ Monthly Cost               │ $1811.73                             │
+│ Cost per Pass              │ $28.23                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                South point satellite station Station                
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ South Point Satellite Station        │
+│ Id                         │ ddf8532a-1cfc-4ad5-b3b8-00641f8acf51 │
+│ Provider                   │ ssc                                  │
+│ Provider Id                │ 7e5a01cd-3141-4ac3-a1be-e5fcbee92a3a │
+│ Longitude                  │ -155.667                             │
+│ Latitude                   │ 19.017                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $26513.92                            │
+│ Per Satellite License Cost │ $2850.51                             │
+│ Monthly Cost               │ $1811.73                             │
+│ Cost per Pass              │ $30.04                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+               Punta arenas satellite station Station                
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Punta Arenas Satellite Station       │
+│ Id                         │ 662db8c6-e5dc-4ab0-a9c2-3204e59c0222 │
+│ Provider                   │ ssc                                  │
+│ Provider Id                │ 7e5a01cd-3141-4ac3-a1be-e5fcbee92a3a │
+│ Longitude                  │ -70.850                              │
+│ Latitude                   │ -52.933                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $26513.92                            │
+│ Per Satellite License Cost │ $2850.51                             │
+│ Monthly Cost               │ $1811.73                             │
+│ Cost per Pass              │ $14.83                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 1                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                 Santiago satellite station Station                  
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Santiago Satellite Station           │
+│ Id                         │ f70de8c0-e71d-48eb-b9eb-a5bc19cab6da │
+│ Provider                   │ ssc                                  │
+│ Provider Id                │ 7e5a01cd-3141-4ac3-a1be-e5fcbee92a3a │
+│ Longitude                  │ -70.667                              │
+│ Latitude                   │ -33.133                              │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $26513.92                            │
+│ Per Satellite License Cost │ $2850.51                             │
+│ Monthly Cost               │ $1811.73                             │
+│ Cost per Pass              │ $21.13                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                  Siracha satellite station Station                  
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Siracha Satellite Station            │
+│ Id                         │ 6e3b4985-0f7b-4d19-920d-ea2adaeaf1e1 │
+│ Provider                   │ ssc                                  │
+│ Provider Id                │ 7e5a01cd-3141-4ac3-a1be-e5fcbee92a3a │
+│ Longitude                  │ 100.917                              │
+│ Latitude                   │ 13.100                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $26513.92                            │
+│ Per Satellite License Cost │ $2850.51                             │
+│ Monthly Cost               │ $1811.73                             │
+│ Cost per Pass              │ $29.56                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+            Western australia space center (wasc) Station             
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                 ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Western Australia Space Center (WASC) │
+│ Id                         │ dcad3daf-9a71-459f-9ca1-bd11946ecbc9  │
+│ Provider                   │ ssc                                   │
+│ Provider Id                │ 7e5a01cd-3141-4ac3-a1be-e5fcbee92a3a  │
+│ Longitude                  │ 115.583                               │
+│ Latitude                   │ -29.083                               │
+│ Altitude                   │ 0.000                                 │
+│ Elevation Min              │ 10.000                                │
+│ Setup Cost                 │ $26513.92                             │
+│ Per Satellite License Cost │ $2850.51                              │
+│ Monthly Cost               │ $1811.73                              │
+│ Cost per Pass              │ $19.09                                │
+│ Cost per Minute            │ $0.00                                 │
+│ Data Rate [Mbps]           │ 2000.000                              │
+│ Antennas                   │ 1                                     │
+└────────────────────────────┴───────────────────────────────────────┘
+                    Esrange space center Station                     
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Esrange Space Center                 │
+│ Id                         │ 432b9b7e-95c3-4c8e-b13f-17010cc90e5f │
+│ Provider                   │ ssc                                  │
+│ Provider Id                │ 7e5a01cd-3141-4ac3-a1be-e5fcbee92a3a │
+│ Longitude                  │ 21.067                               │
+│ Latitude                   │ 67.883                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $26513.92                            │
+│ Per Satellite License Cost │ $2850.51                             │
+│ Monthly Cost               │ $1811.73                             │
+│ Cost per Pass              │ $16.81                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                  Inuvik satellite station Station                   
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Inuvik Satellite Station             │
+│ Id                         │ e0879f2d-41ad-408e-8f4f-8038d6e7d4ec │
+│ Provider                   │ ssc                                  │
+│ Provider Id                │ 7e5a01cd-3141-4ac3-a1be-e5fcbee92a3a │
+│ Longitude                  │ -133.500                             │
+│ Latitude                   │ 68.400                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $26513.92                            │
+│ Per Satellite License Cost │ $2850.51                             │
+│ Monthly Cost               │ $1811.73                             │
+│ Cost per Pass              │ $17.21                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 2                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                     Stockholm teleport Station                      
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property                   ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                       │ Stockholm Teleport                   │
+│ Id                         │ 8926ce82-6025-417f-8121-8d1b39ef1f44 │
+│ Provider                   │ ssc                                  │
+│ Provider Id                │ 7e5a01cd-3141-4ac3-a1be-e5fcbee92a3a │
+│ Longitude                  │ 18.083                               │
+│ Latitude                   │ 59.200                               │
+│ Altitude                   │ 0.000                                │
+│ Elevation Min              │ 10.000                               │
+│ Setup Cost                 │ $26513.92                            │
+│ Per Satellite License Cost │ $2850.51                             │
+│ Monthly Cost               │ $1811.73                             │
+│ Cost per Pass              │ $30.65                               │
+│ Cost per Minute            │ $0.00                                │
+│ Data Rate [Mbps]           │ 2000.000                             │
+│ Antennas                   │ 3                                    │
+└────────────────────────────┴──────────────────────────────────────┘
+                         ISS Satellite                         
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Property             ┃ Value                                ┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Name                 │ ISS                                  │
+│ Id                   │ 26724342-6105-46b8-a44a-37d1f7c52ed2 │
+│ Satcat ID            │ 25544                                │
+│ Epoch                │ 2022-01-01 00:00:00.000 UTC          │
+│ Semi-Major Axis      │ 6798.136                             │
+│ Altitude             │ 420.000                              │
+│ Eccentricity         │ 0.001                                │
+│ Inclination          │ 51.640                               │
+│ RAAN                 │ 0.000                                │
+│ Argument of Perigee  │ 0.000                                │
+│ Mean Anomaly         │ 0.000                                │
+│ Data Rate [Mbps]     │ 1200.000                             │
+└──────────────────────┴──────────────────────────────────────┘

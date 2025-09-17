@@ -374,6 +374,12 @@ class MilpOptimizer(pk.block, GroundStationOptimizer):
                     raise ValueError("Presolve must be 0, 1, or 2")
                 solver.options['Presolve'] = self.presolve
 
+            # =================================================================
+            # ADD THIS COMMAND TO TRADE PRECISION FOR SPEED
+            # This tells the solver to stop once it finds a solution within 5% of optimal.
+            solver.options['ratioGap'] = 0.05
+            # =================================================================
+
         try:
             self.solution = solver.solve(self, tee=self.verbose)
         except ApplicationError as e:
