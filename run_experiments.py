@@ -60,16 +60,37 @@ logger = logging.getLogger(__name__)
 console = Console()
 
 
+def get_fresh_constraints():
+    """
+    Returns a new list of the foundational constraint objects,
+    excluding any experimental (e.g., budget) limitations.
+    """
+    return [
+        MinContactDurationConstraint(min_duration=180.0),
+        StationContactExclusionConstraint(),
+        SatelliteContactExclusionConstraint(),
+        MinSatelliteDataDownlinkConstraint(value=1e11),
+    ]
+
+
 def run_optimization(scenario: Scenario, contacts: dict, objective_class, constraints: list) -> dict:
     """Helper function to run a single optimization instance and return key results."""
-    optimizer = MilpOptimizer.from_scenario(scenario, optimizer=CONFIG["optimizer_engine"])
+    # This function uses the direct constructor now, which is cleaner.
+    optimizer_enum = get_optimizer(CONFIG["optimizer_engine"])
+    optimizer = MilpOptimizer(opt_window=scenario.opt_window, optimizer=optimizer_enum)
+    
+    # Manually add scenario components
+    for sat in scenario.satellites:
+        optimizer.add_satellite(sat)
+    for prov in scenario.providers:
+        optimizer.add_provider(prov)
+
     optimizer.contacts = contacts
     optimizer.set_objective(objective_class)
     optimizer.add_constraints(constraints)
     optimizer.solve()
     
     status = optimizer.solver_status.lower()
-    
     if status != 'optimal':
         logger.warning(f"Solver returned non-optimal status: {status}")
         return { "status": status, "data_gb": 0, "cost_monthly": 0, "stations": 0, "providers": 0 }
@@ -77,8 +98,7 @@ def run_optimization(scenario: Scenario, contacts: dict, objective_class, constr
     solution = optimizer.get_solution()
     stats = solution['statistics']
     return {
-        "status": status,
-        "data_gb": stats['data_downlinked']['total_GB'],
+        "status": status, "data_gb": stats['data_downlinked']['total_GB'],
         "cost_monthly": stats['costs']['monthly_operational'],
         "stations": len(solution['selected_stations']),
         "providers": len(solution['selected_providers']),
@@ -111,7 +131,7 @@ def run_limited_provider_benchmark(full_scenario: Scenario, all_contacts: dict, 
             
     return best_result
 
-# --- Pillar Execution Functions ---
+
 def execute_pareto_analysis(trial_seed: str):
     cfg = CONFIG["pareto"]
     opt_window = OptimizationWindow(datetime.datetime(2023, 1, 1), datetime.datetime(2024, 1, 1), datetime.datetime(2023, 1, 1), datetime.datetime(2023, 1, 8))
@@ -120,17 +140,26 @@ def execute_pareto_analysis(trial_seed: str):
     scengen.add_all_providers()
     scenario = scengen.sample_scenario()
     
-    optimizer = MilpOptimizer.from_scenario(scenario, optimizer=CONFIG["optimizer_engine"])
-    optimizer.compute_contacts()
-    contacts = optimizer.contacts
+    # This temp optimizer is only for contact computation
+    temp_opt = MilpOptimizer(opt_window=scenario.opt_window)
+    for sat in scenario.satellites:
+        temp_opt.add_satellite(sat)
+    for prov in scenario.providers:
+        temp_opt.add_provider(prov)
+    temp_opt.compute_contacts()
+    contacts = temp_opt.contacts
     
     trial_results = []
     for p_base in cfg["p_base_sweep"]:
         objective = MaxDataWithOCPObjective(P_base=p_base)
-        constraints = [MinContactDurationConstraint(min_duration=180.0), StationContactExclusionConstraint(), SatelliteContactExclusionConstraint()]
+        # Get foundational constraints and add the high-budget backstop
+        constraints = get_fresh_constraints()
+        constraints.append(MaxOperationalCostConstraint(value=1e9))
         result = run_optimization(scenario, contacts, objective, constraints)
         trial_results.append({"p_base": p_base, **result})
     return trial_results
+
+
 
 def execute_scalability_analysis(trial_seed: str):
     cfg = CONFIG["scalability"]
@@ -172,17 +201,24 @@ def execute_budget_constrained_analysis(trial_seed: str):
     scengen.add_all_providers()
     scenario = scengen.sample_scenario()
     
-    optimizer = MilpOptimizer.from_scenario(scenario, optimizer=CONFIG["optimizer_engine"])
-    optimizer.compute_contacts()
-    contacts = optimizer.contacts
+    # This temp optimizer is only for contact computation
+    temp_opt = MilpOptimizer(opt_window=scenario.opt_window)
+    for sat in scenario.satellites:
+        temp_opt.add_satellite(sat)
+    for prov in scenario.providers:
+        temp_opt.add_provider(prov)
+    temp_opt.compute_contacts()
+    contacts = temp_opt.contacts
 
-    constraints = [
-        MinContactDurationConstraint(min_duration=180.0), StationContactExclusionConstraint(),
-        SatelliteContactExclusionConstraint(), MaxOperationalCostConstraint(value=cfg["budget_usd_per_month"])
-    ]
+    # Create two separate, clean constraint lists
+    constraints_baseline = get_fresh_constraints()
+    constraints_baseline.append(MaxOperationalCostConstraint(value=cfg["budget_usd_per_month"]))
+    
+    constraints_ocp = get_fresh_constraints()
+    constraints_ocp.append(MaxOperationalCostConstraint(value=cfg["budget_usd_per_month"]))
 
-    res_baseline = run_optimization(scenario, contacts, MaxDataDownlinkObjective(), constraints)
-    res_ocp = run_optimization(scenario, contacts, MaxDataWithOCPObjective(P_base=cfg["ocp_p_base"]), constraints)
+    res_baseline = run_optimization(scenario, contacts, MaxDataDownlinkObjective(), constraints_baseline)
+    res_ocp = run_optimization(scenario, contacts, MaxDataWithOCPObjective(P_base=cfg["ocp_p_base"]), constraints_ocp)
     
     return {"baseline": res_baseline, "ocp": res_ocp}
 
