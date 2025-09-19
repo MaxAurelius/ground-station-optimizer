@@ -32,11 +32,11 @@ from gsopt.utils import filter_warnings
 # --- Configuration ---
 CONFIG = {
     "optimizer_engine": "cbc",
-    "num_trials": 2,
+    "num_trials": 1,
     "base_seed": "final-validated-results-2025",
-    "output_filename": "final_results.json",
+    "output_filename": "final_results_pareto_n100_sat5.json",
     "pareto": {
-        "satellite_count": 1,
+        "satellite_count": 5,
         "p_base_sweep": [0, 100, 250, 500, 1000, 2500],
     },
     "scalability": {
