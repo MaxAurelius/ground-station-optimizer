@@ -117,7 +117,7 @@ class GroundStationOptimizer(metaclass=ABCMeta):
         
         # PARALLEL START
         # Compute contacts
-        '''
+        
         mpctx = mp.get_context('fork')
         with mpctx.Pool(mp.cpu_count()) as pool:
 
@@ -128,21 +128,21 @@ class GroundStationOptimizer(metaclass=ABCMeta):
 
                 for c in r:
                     self.contacts[c.id] = c
-        '''
-        # PARALLEL END
+
+        # PARALLEL START
         
         # SERIAL START
-
+        '''
         # Compute contacts serially to prevent nested parallelism
-        all_contact_results = []
-        for task in tasks:
-            # The '*' unpacks the tuple (station, sc, t_start, t_end) into arguments
-            all_contact_results.append(utils.compute_contacts(*task))
+        # all_contact_results = []
+        # for task in tasks:
+        #     # The '*' unpacks the tuple (station, sc, t_start, t_end) into arguments
+        #     all_contact_results.append(utils.compute_contacts(*task))
 
-        for r in all_contact_results:
-            for c in r:
-                self.contacts[c.id] = c
-
+        # for r in all_contact_results:
+        #     for c in r:
+        #         self.contacts[c.id] = c
+        '''
         # SERIAL END 
 
         te = time.perf_counter()

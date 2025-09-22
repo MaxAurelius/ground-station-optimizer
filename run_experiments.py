@@ -35,11 +35,11 @@ from multiprocessing import Pool
 # --- Configuration ---
 CONFIG = {
     "optimizer_engine": "cbc",
-    "num_trials": 10,
+    "num_trials": 8,
     "base_seed": "final-validated-results-2025",
-    "output_filename": "final_results.json",
+    "output_filename": "final_resuls_pareto_n8_sat1.json",
     "pareto": {
-        "satellite_count": 5,
+        "satellite_count": 1,
         "p_base_sweep": [0, 100, 250, 500, 1000, 2500],
     },
     "scalability": {
@@ -226,7 +226,7 @@ def execute_budget_constrained_analysis(trial_seed: str):
 def run_single_trial(trial_number: int):
     """
     Executes all enabled pillars for a single trial number and returns the results.
-    This function is what will be run in parallel.
+    This function is what will be run in parallel.s
     """
     trial_seed = f'{CONFIG["base_seed"]}-{trial_number}'
     console.print(f"Starting Trial {trial_number + 1}/{CONFIG['num_trials']} (Seed: {trial_seed})...")
