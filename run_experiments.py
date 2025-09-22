@@ -18,9 +18,11 @@ import itertools
 import copy
 import json
 import pandas as pd
-from rich.console import Console
-from rich.table import Table
 import os
+from rich.console import Console
+from rich.progress import Progress, BarColumn, TextColumn, TimeElapsedColumn, TimeRemainingColumn
+from rich.logging import RichHandler
+
 
 # Import all necessary components from the gsopt library
 from gsopt.milp_objectives import MaxDataDownlinkObjective, MaxDataWithOCPObjective
@@ -63,17 +65,13 @@ def get_fresh_constraints():
     ]
 
 
-def run_optimization(scenario: Scenario, contacts: dict, objective_class, constraints: list) -> dict:
+def run_optimization(scenario: Scenario, contacts: dict, objective_class, constraints: list, config: dict) -> dict:
     """Helper function to run a single optimization instance and return key results."""
-    # Correctly use the direct constructor, not the flawed class method
-    optimizer_enum = get_optimizer(CONFIG["optimizer_engine"])
+    optimizer_enum = get_optimizer(config["optimizer_engine"])
     optimizer = MilpOptimizer(opt_window=scenario.opt_window, optimizer=optimizer_enum)
     
-    # Manually add the scenario components to the new optimizer instance
-    for sat in scenario.satellites:
-        optimizer.add_satellite(sat)
-    for prov in scenario.providers:
-        optimizer.add_provider(prov)
+    for sat in scenario.satellites: optimizer.add_satellite(sat)
+    for prov in scenario.providers: optimizer.add_provider(prov)
 
     optimizer.contacts = contacts
     optimizer.set_objective(objective_class)
@@ -93,7 +91,6 @@ def run_optimization(scenario: Scenario, contacts: dict, objective_class, constr
         "stations": len(solution['selected_stations']),
         "providers": len(solution['selected_providers']),
     }
-
 def run_limited_provider_benchmark(full_scenario: Scenario, all_contacts: dict, constraints: list) -> dict:
     """Finds the best-performing solution when restricted to only one or two providers."""
     best_result = {"data_gb": 0, "status": "untested"}
@@ -121,17 +118,18 @@ def run_limited_provider_benchmark(full_scenario: Scenario, all_contacts: dict, 
             
     return best_result
 
-def execute_pareto_analysis(trial_seed: str):
+def execute_pareto_analysis(trial_seed: str, config: dict, progress, task_id):
     """Executes the Pareto analysis for a single trial."""
-    cfg = CONFIG["pareto"]
+    cfg = config["pareto"]
     logger.info(f"Executing Pareto analysis with {cfg['satellite_count']} satellite(s)...")
+    progress.update(task_id, description="[cyan]Pareto: Generating Scenario...")
     opt_window = OptimizationWindow(datetime.datetime(2023, 1, 1), datetime.datetime(2024, 1, 1), datetime.datetime(2023, 1, 1), datetime.datetime(2023, 1, 8))
     scengen = ScenarioGenerator(opt_window, seed=trial_seed)
     scengen.add_random_satellites(cfg["satellite_count"])
     scengen.add_all_providers()
     scenario = scengen.sample_scenario()
     
-    # Use a temporary optimizer ONLY for contact computation
+    progress.update(task_id, description="[cyan]Pareto: Computing Contacts...")
     temp_opt = MilpOptimizer(opt_window=scenario.opt_window)
     for sat in scenario.satellites: temp_opt.add_satellite(sat)
     for prov in scenario.providers: temp_opt.add_provider(prov)
@@ -139,12 +137,12 @@ def execute_pareto_analysis(trial_seed: str):
     contacts = temp_opt.contacts
     
     trial_results = []
-    for p_base in cfg["p_base_sweep"]:
-        logger.info(f"Running Pareto point with P_base = ${p_base}")
+    for i, p_base in enumerate(cfg["p_base_sweep"]):
+        progress.update(task_id, description=f"[cyan]Pareto: Solving P_base=${p_base} ({i+1}/{len(cfg['p_base_sweep'])})")
         objective = MaxDataWithOCPObjective(P_base=p_base)
         constraints = get_fresh_constraints()
-        constraints.append(MaxOperationalCostConstraint(value=1e9)) # Unconstrained budget
-        result = run_optimization(scenario, contacts, objective, constraints)
+        constraints.append(MaxOperationalCostConstraint(value=1e9))
+        result = run_optimization(scenario, contacts, objective, constraints, config)
         trial_results.append({"p_base": p_base, **result})
     return trial_results
 
@@ -180,31 +178,32 @@ def execute_scalability_analysis(trial_seed: str):
         })
     return trial_results
 
-def execute_budget_constrained_analysis(trial_seed: str):
+def execute_budget_constrained_analysis(trial_seed: str, config: dict, progress, task_id):
     """Executes the Budget-Constrained analysis for a single trial."""
-    cfg = CONFIG["budget_constrained"]
+    cfg = config["budget_constrained"]
     logger.info(f"Executing Budget-Constrained analysis with {cfg['satellite_count']} satellite(s)...")
+    progress.update(task_id, description="[cyan]Budget: Generating Scenario...")
     opt_window = OptimizationWindow(datetime.datetime(2023, 1, 1), datetime.datetime(2024, 1, 1), datetime.datetime(2023, 1, 1), datetime.datetime(2023, 1, 8))
     scengen = ScenarioGenerator(opt_window, seed=trial_seed)
     scengen.add_random_satellites(cfg["satellite_count"])
     scengen.add_all_providers()
     scenario = scengen.sample_scenario()
 
-    # Use a temporary optimizer ONLY for contact computation
+    progress.update(task_id, description="[cyan]Budget: Computing Contacts...")
     temp_opt = MilpOptimizer(opt_window=scenario.opt_window)
     for sat in scenario.satellites: temp_opt.add_satellite(sat)
     for prov in scenario.providers: temp_opt.add_provider(prov)
     temp_opt.compute_contacts()
     contacts = temp_opt.contacts
 
-    # Create two separate, clean constraint lists
+    progress.update(task_id, description="[cyan]Budget: Solving Baseline...")
     constraints_baseline = get_fresh_constraints()
     constraints_baseline.append(MaxOperationalCostConstraint(value=cfg["budget_usd_per_month"]))
+    res_baseline = run_optimization(scenario, contacts, MaxDataDownlinkObjective(), constraints_baseline)
     
+    progress.update(task_id, description="[cyan]Budget: Solving OCP-Enhanced...")
     constraints_ocp = get_fresh_constraints()
     constraints_ocp.append(MaxOperationalCostConstraint(value=cfg["budget_usd_per_month"]))
-
-    res_baseline = run_optimization(scenario, contacts, MaxDataDownlinkObjective(), constraints_baseline)
     res_ocp = run_optimization(scenario, contacts, MaxDataWithOCPObjective(P_base=cfg["ocp_p_base"]), constraints_ocp)
     
     return {"baseline": res_baseline, "ocp": res_ocp}
@@ -325,32 +324,27 @@ def process_and_display_results(all_raw_results: dict):
         else:
             console.print("[yellow]No Budget data to process (all trials may have failed).[/yellow]")
 
+# --- Main Execution Block ---
 if __name__ == "__main__":
-    # --- Load Configuration and Set Up Logging ---
+    # Load Configuration
     try:
         with open('config.json', 'r') as f:
             CONFIG = json.load(f)
     except FileNotFoundError:
-        console.print("[bold red]Error: config.json not found. Please create it.[/bold red]")
+        print("[bold red]Error: config.json not found. Please create it.[/bold red]")
         exit()
 
-    # Set up logging to both console and a file
-    log_formatter = logging.Formatter('%(asctime)s - %(levelname)s - [%(filename)s:%(lineno)d] - %(message)s')
-    logger = logging.getLogger()
-    logger.setLevel(logging.INFO)
-
-    if logger.hasHandlers():
-        logger.handlers.clear()
-
-    file_handler = logging.FileHandler(CONFIG['log_filename'])
-    file_handler.setFormatter(log_formatter)
-    logger.addHandler(file_handler)
+    # Setup Logging
+    logging.basicConfig(
+        level="INFO",
+        format="%(message)s",
+        datefmt="[%X]",
+        handlers=[RichHandler(rich_tracebacks=True)]
+    )
+    logger = logging.getLogger(__name__)
+    filter_warnings()
     
-    console_handler = logging.StreamHandler()
-    console_handler.setFormatter(log_formatter)
-    logger.addHandler(console_handler)
-    
-    # --- Load existing results to resume from checkpoint ---
+    # Load existing results for resume capability
     if os.path.exists(CONFIG["output_filename"]):
         try:
             with open(CONFIG["output_filename"], 'r') as f:
@@ -365,30 +359,54 @@ if __name__ == "__main__":
     completed_trials = len(all_results.get("pareto", []))
     logger.info(f"Session Status: {completed_trials} of {CONFIG['num_trials']} trials already complete.")
     
-    # --- Serial Execution Loop ---
-    for i in range(completed_trials, CONFIG['num_trials']):
-        result = run_single_trial(i, CONFIG)
-        
-        if result:
-            if "pareto" in result: all_results["pareto"].append(result["pareto"])
-            if "budget" in result: all_results["budget"].append(result["budget"])
-        else:
-            # Append placeholders for failed trials to keep counts consistent for resume logic
-            if CONFIG.get("pareto", {}).get("active", False): all_results["pareto"].append(None)
-            if CONFIG.get("budget_constrained", {}).get("active", False): all_results["budget"].append(None)
+    # Setup Progress Bar
+    progress = Progress(
+        TextColumn("[bold blue]{task.description}", justify="right"),
+        BarColumn(bar_width=None),
+        "[progress.percentage]{task.percentage:>3.0f}%",
+        TimeRemainingColumn(),
+        TimeElapsedColumn(),
+        console=Console(),
+    )
 
-        try:
-            # Create a clean version of results for saving (without None values)
-            clean_results_to_save = {
-                "pareto": [r for r in all_results["pareto"] if r is not None],
-                "budget": [r for r in all_results["budget"] if r is not None]
-            }
-            with open(CONFIG["output_filename"], 'w') as f:
-                json.dump({"config": CONFIG, "raw_trial_data": clean_results_to_save}, f, indent=4)
-            logger.info(f"Successfully saved progress for trial {i+1} to {CONFIG['output_filename']}")
-        except Exception as e:
-            logger.error(f"Error saving progress after trial {i+1}: {e}")
+    with progress:
+        overall_task = progress.add_task("[red]Overall Progress", total=CONFIG['num_trials'])
+        progress.update(overall_task, advance=completed_trials)
+        
+        # --- Serial Execution Loop ---
+        for i in range(completed_trials, CONFIG['num_trials']):
+            trial_seed = f'{CONFIG["base_seed"]}-{i}'
+            logger.info(f"--- Starting Trial {i+1}/{CONFIG['num_trials']} (Seed: {trial_seed}) ---")
+            
+            trial_task = progress.add_task(f"[green]Trial {i+1}", total=2) # 2 pillars to run
+
+            try:
+                if CONFIG["pareto"].get("active", False):
+                    all_results["pareto"].append(execute_pareto_analysis(trial_seed, CONFIG, progress, trial_task))
+                progress.update(trial_task, advance=1)
+
+                if CONFIG["budget_constrained"].get("active", False):
+                    all_results["budget"].append(execute_budget_constrained_analysis(trial_seed, CONFIG, progress, trial_task))
+                progress.update(trial_task, advance=1)
+
+            except Exception as e:
+                logger.error(f"TRIAL {i + 1} FAILED with unhandled error: {e}", exc_info=True)
+                all_results["pareto"].append(None)
+                all_results["budget"].append(None)
+            
+            # Remove the finished trial task bar
+            progress.remove_task(trial_task)
+            progress.update(overall_task, advance=1)
+            
+            # --- Incremental Save after each full trial ---
+            try:
+                clean_results_to_save = {k: [r for r in v if r is not None] for k, v in all_results.items()}
+                with open(CONFIG["output_filename"], 'w') as f:
+                    json.dump({"config": CONFIG, "raw_trial_data": clean_results_to_save}, f, indent=4)
+                logger.info(f"Successfully saved progress for trial {i+1}")
+            except Exception as e:
+                logger.error(f"Error saving progress after trial {i+1}: {e}")
 
     # --- Final Aggregation and Display ---
     console.print("\n[bold yellow]All trials complete. Aggregating and displaying final results...[/bold yellow]")
-    process_and_display_results(all_results)
+    process_and_display_results(all_results, CONFIG)
