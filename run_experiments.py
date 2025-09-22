@@ -22,6 +22,7 @@ import os
 from rich.console import Console
 from rich.progress import Progress, BarColumn, TextColumn, TimeElapsedColumn, TimeRemainingColumn
 from rich.logging import RichHandler
+from rich.table import Table
 
 
 # Import all necessary components from the gsopt library
@@ -118,18 +119,16 @@ def run_limited_provider_benchmark(full_scenario: Scenario, all_contacts: dict, 
             
     return best_result
 
-def execute_pareto_analysis(trial_seed: str, config: dict, progress, task_id):
+def execute_pareto_analysis(trial_seed: str, config: dict):
     """Executes the Pareto analysis for a single trial."""
     cfg = config["pareto"]
     logger.info(f"Executing Pareto analysis with {cfg['satellite_count']} satellite(s)...")
-    progress.update(task_id, description="[cyan]Pareto: Generating Scenario...")
     opt_window = OptimizationWindow(datetime.datetime(2023, 1, 1), datetime.datetime(2024, 1, 1), datetime.datetime(2023, 1, 1), datetime.datetime(2023, 1, 8))
     scengen = ScenarioGenerator(opt_window, seed=trial_seed)
     scengen.add_random_satellites(cfg["satellite_count"])
     scengen.add_all_providers()
     scenario = scengen.sample_scenario()
     
-    progress.update(task_id, description="[cyan]Pareto: Computing Contacts...")
     temp_opt = MilpOptimizer(opt_window=scenario.opt_window)
     for sat in scenario.satellites: temp_opt.add_satellite(sat)
     for prov in scenario.providers: temp_opt.add_provider(prov)
@@ -137,8 +136,8 @@ def execute_pareto_analysis(trial_seed: str, config: dict, progress, task_id):
     contacts = temp_opt.contacts
     
     trial_results = []
-    for i, p_base in enumerate(cfg["p_base_sweep"]):
-        progress.update(task_id, description=f"[cyan]Pareto: Solving P_base=${p_base} ({i+1}/{len(cfg['p_base_sweep'])})")
+    for p_base in cfg["p_base_sweep"]:
+        logger.info(f"Running Pareto point with P_base = ${p_base}")
         objective = MaxDataWithOCPObjective(P_base=p_base)
         constraints = get_fresh_constraints()
         constraints.append(MaxOperationalCostConstraint(value=1e9))
@@ -146,8 +145,10 @@ def execute_pareto_analysis(trial_seed: str, config: dict, progress, task_id):
         trial_results.append({"p_base": p_base, **result})
     return trial_results
 
-def execute_scalability_analysis(trial_seed: str):
-    cfg = CONFIG["scalability"]
+def execute_scalability_analysis(trial_seed: str, config: dict):
+    """Executes the Scalability analysis for a single trial."""
+    cfg = config["scalability"]
+    logger.info(f"Executing Scalability analysis...")
     trial_results = []
     opt_window = OptimizationWindow(datetime.datetime(2023, 1, 1), datetime.datetime(2024, 1, 1), datetime.datetime(2023, 1, 1), datetime.datetime(2023, 1, 8))
     
@@ -156,55 +157,52 @@ def execute_scalability_analysis(trial_seed: str):
     base_scenario_no_sats = scengen_base.sample_scenario()
 
     for sat_count in cfg["satellite_counts"]:
+        logger.info(f"Running Scalability point for {sat_count} satellite(s)...")
         scenario = copy.deepcopy(base_scenario_no_sats)
         scengen_sats = ScenarioGenerator(opt_window, seed=f'{trial_seed}-{sat_count}')
         scengen_sats.add_random_satellites(sat_count)
         scenario.satellites = scengen_sats.satellites
         
-        optimizer = MilpOptimizer.from_scenario(scenario, optimizer=CONFIG["optimizer_engine"])
-        optimizer.compute_contacts()
-        contacts = optimizer.contacts
-        constraints = [MinContactDurationConstraint(min_duration=180.0), StationContactExclusionConstraint(), SatelliteContactExclusionConstraint()]
+        temp_opt = MilpOptimizer(opt_window=scenario.opt_window)
+        for sat in scenario.satellites: temp_opt.add_satellite(sat)
+        for prov in scenario.providers: temp_opt.add_provider(prov)
+        temp_opt.compute_contacts()
+        contacts = temp_opt.contacts
+        
+        constraints = get_fresh_constraints()
+        constraints.append(MaxOperationalCostConstraint(value=1e9))
 
         res_limited = run_limited_provider_benchmark(scenario, contacts, constraints)
         res_baseline = run_optimization(scenario, contacts, MaxDataDownlinkObjective(), constraints)
         res_ocp = run_optimization(scenario, contacts, MaxDataWithOCPObjective(P_base=cfg["ocp_p_base"]), constraints)
         
         trial_results.append({
-            "sat_count": sat_count,
-            "limited": res_limited,
-            "baseline": res_baseline,
-            "ocp": res_ocp
+            "sat_count": sat_count, "limited": res_limited,
+            "baseline": res_baseline, "ocp": res_ocp
         })
     return trial_results
 
-def execute_budget_constrained_analysis(trial_seed: str, config: dict, progress, task_id):
+def execute_budget_constrained_analysis(trial_seed: str, config: dict):
     """Executes the Budget-Constrained analysis for a single trial."""
     cfg = config["budget_constrained"]
     logger.info(f"Executing Budget-Constrained analysis with {cfg['satellite_count']} satellite(s)...")
-    progress.update(task_id, description="[cyan]Budget: Generating Scenario...")
     opt_window = OptimizationWindow(datetime.datetime(2023, 1, 1), datetime.datetime(2024, 1, 1), datetime.datetime(2023, 1, 1), datetime.datetime(2023, 1, 8))
     scengen = ScenarioGenerator(opt_window, seed=trial_seed)
     scengen.add_random_satellites(cfg["satellite_count"])
     scengen.add_all_providers()
     scenario = scengen.sample_scenario()
 
-    progress.update(task_id, description="[cyan]Budget: Computing Contacts...")
     temp_opt = MilpOptimizer(opt_window=scenario.opt_window)
     for sat in scenario.satellites: temp_opt.add_satellite(sat)
     for prov in scenario.providers: temp_opt.add_provider(prov)
     temp_opt.compute_contacts()
     contacts = temp_opt.contacts
 
-    progress.update(task_id, description="[cyan]Budget: Solving Baseline...")
-    constraints_baseline = get_fresh_constraints()
-    constraints_baseline.append(MaxOperationalCostConstraint(value=cfg["budget_usd_per_month"]))
-    res_baseline = run_optimization(scenario, contacts, MaxDataDownlinkObjective(), constraints_baseline)
-    
-    progress.update(task_id, description="[cyan]Budget: Solving OCP-Enhanced...")
-    constraints_ocp = get_fresh_constraints()
-    constraints_ocp.append(MaxOperationalCostConstraint(value=cfg["budget_usd_per_month"]))
-    res_ocp = run_optimization(scenario, contacts, MaxDataWithOCPObjective(P_base=cfg["ocp_p_base"]), constraints_ocp)
+    constraints = get_fresh_constraints()
+    constraints.append(MaxOperationalCostConstraint(value=cfg["budget_usd_per_month"]))
+
+    res_baseline = run_optimization(scenario, contacts, MaxDataDownlinkObjective(), constraints, config)
+    res_ocp = run_optimization(scenario, contacts, MaxDataWithOCPObjective(P_base=cfg["ocp_p_base"]), constraints, config)
     
     return {"baseline": res_baseline, "ocp": res_ocp}
 
@@ -419,4 +417,4 @@ if __name__ == "__main__":
 
     # --- Final Aggregation and Display ---
     console.print("\n[bold yellow]All trials complete. Aggregating and displaying final results...[/bold yellow]")
-    process_and_display_results(all_results, CONFIG)
+    process_and_display_results(all_results)
