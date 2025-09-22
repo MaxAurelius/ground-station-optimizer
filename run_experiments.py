@@ -92,7 +92,9 @@ def run_optimization(scenario: Scenario, contacts: dict, objective_class, constr
         "stations": len(solution['selected_stations']),
         "providers": len(solution['selected_providers']),
     }
-def run_limited_provider_benchmark(full_scenario: Scenario, all_contacts: dict, constraints: list) -> dict:
+
+
+def run_limited_provider_benchmark(full_scenario: Scenario, all_contacts: dict, constraints: list, config: dict) -> dict:
     """Finds the best-performing solution when restricted to only one or two providers."""
     best_result = {"data_gb": 0, "status": "untested"}
     provider_ids = [p.id for p in full_scenario.providers]
@@ -103,7 +105,8 @@ def run_limited_provider_benchmark(full_scenario: Scenario, all_contacts: dict, 
         scenario_copy.providers = [p for p in scenario_copy.providers if p.id == p_id]
         active_provider_ids = {p.id for p in scenario_copy.providers}
         filtered_contacts = {k: v for k, v in all_contacts.items() if v.provider_id in active_provider_ids}
-        result = run_optimization(scenario_copy, filtered_contacts, MaxDataDownlinkObjective(), constraints)
+        # Pass the 'config' dictionary here
+        result = run_optimization(scenario_copy, filtered_contacts, MaxDataDownlinkObjective(), constraints, config)
         if result["data_gb"] > best_result["data_gb"]:
             best_result = result
 
@@ -113,7 +116,8 @@ def run_limited_provider_benchmark(full_scenario: Scenario, all_contacts: dict, 
         scenario_copy.providers = [p for p in scenario_copy.providers if p.id in [p1_id, p2_id]]
         active_provider_ids = {p.id for p in scenario_copy.providers}
         filtered_contacts = {k: v for k, v in all_contacts.items() if v.provider_id in active_provider_ids}
-        result = run_optimization(scenario_copy, filtered_contacts, MaxDataDownlinkObjective(), constraints)
+        # Pass the 'config' dictionary here as well
+        result = run_optimization(scenario_copy, filtered_contacts, MaxDataDownlinkObjective(), constraints, config)
         if result["data_gb"] > best_result["data_gb"]:
             best_result = result
             
@@ -172,9 +176,10 @@ def execute_scalability_analysis(trial_seed: str, config: dict):
         constraints = get_fresh_constraints()
         constraints.append(MaxOperationalCostConstraint(value=1e9))
 
-        res_limited = run_limited_provider_benchmark(scenario, contacts, constraints)
-        res_baseline = run_optimization(scenario, contacts, MaxDataDownlinkObjective(), constraints)
-        res_ocp = run_optimization(scenario, contacts, MaxDataWithOCPObjective(P_base=cfg["ocp_p_base"]), constraints)
+        # Pass the 'config' dictionary here
+        res_limited = run_limited_provider_benchmark(scenario, contacts, constraints, config)
+        res_baseline = run_optimization(scenario, contacts, MaxDataDownlinkObjective(), constraints, config)
+        res_ocp = run_optimization(scenario, contacts, MaxDataWithOCPObjective(P_base=cfg["ocp_p_base"]), constraints, config)
         
         trial_results.append({
             "sat_count": sat_count, "limited": res_limited,
@@ -260,7 +265,7 @@ def process_and_display_results(all_raw_results: dict):
                 pareto_success_counts = df_pareto_succ.groupby('p_base').size()
                 pareto_success_rate = (pareto_success_counts / pareto_total_counts * 100).fillna(0)
                 
-                table = Table(title=f"Aggregated Pareto Frontier (N={len(all_raw_results['pareto'])} trials)")
+                table = Table(title=f"Aggregated Pareto Frontier (N={CONFIG['num_trials']} trials)")
                 table.add_column("P_base ($)", style="cyan")
                 table.add_column("Success Rate", justify="right")
                 table.add_column("Avg. Stations", justify="right")
