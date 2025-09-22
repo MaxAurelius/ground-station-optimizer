@@ -209,26 +209,40 @@ def execute_budget_constrained_analysis(trial_seed: str, config: dict, progress,
     return {"baseline": res_baseline, "ocp": res_ocp}
 
 
-def run_single_trial(trial_number: int, config: dict):
+def run_single_trial(trial_number: int, config: dict, progress):
     """
-    Executes all active pillars for a single trial number and returns the results.
+    Executes all active pillars for a single trial number and returns the results,
+    updating the progress bar as it goes.
     """
     trial_seed = f'{config["base_seed"]}-{trial_number}'
-    logger.info(f"--- Starting Trial {trial_number + 1}/{config['num_trials']} (Seed: {trial_seed}) ---")
+    
+    # Determine the number of active pillars for the sub-progress bar
+    num_pillars_active = sum(1 for pillar in ["pareto", "scalability", "budget_constrained"] if config.get(pillar, {}).get("active", False))
+    trial_task = progress.add_task(f"[green]Trial {trial_number + 1}", total=num_pillars_active)
     
     trial_results = {}
     try:
-        if config["pareto"].get("active", False):
-            trial_results["pareto"] = execute_pareto_analysis(trial_seed)
+        if config.get("pareto", {}).get("active", False):
+            progress.update(trial_task, description=f"[green]Trial {trial_number + 1}: Pareto")
+            trial_results["pareto"] = execute_pareto_analysis(trial_seed, config)
+            progress.update(trial_task, advance=1)
         
-        if config["budget_constrained"].get("active", False):
-            trial_results["budget"] = execute_budget_constrained_analysis(trial_seed)
+        if config.get("scalability", {}).get("active", False):
+            progress.update(trial_task, description=f"[green]Trial {trial_number + 1}: Scalability")
+            trial_results["scalability"] = execute_scalability_analysis(trial_seed, config)
+            progress.update(trial_task, advance=1)
 
-        logger.info(f"--- Finished Trial {trial_number + 1}/{config['num_trials']} ---")
+        if config.get("budget_constrained", {}).get("active", False):
+            progress.update(trial_task, description=f"[green]Trial {trial_number + 1}: Budget")
+            trial_results["budget"] = execute_budget_constrained_analysis(trial_seed, config)
+            progress.update(trial_task, advance=1)
+
+        progress.remove_task(trial_task)
         return trial_results
 
     except Exception as e:
         logger.error(f"TRIAL {trial_number + 1} FAILED with an unhandled error: {e}", exc_info=True)
+        progress.remove_task(trial_task)
         return None # Return None on failure
 
 def process_and_display_results(all_raw_results: dict):
@@ -344,29 +358,31 @@ if __name__ == "__main__":
     logger = logging.getLogger(__name__)
     filter_warnings()
     
-    # Load existing results for resume capability
     if os.path.exists(CONFIG["output_filename"]):
         try:
             with open(CONFIG["output_filename"], 'r') as f:
                 saved_data = json.load(f)
-                all_results = saved_data.get("raw_trial_data", {"pareto": [], "budget": []})
+                all_results = saved_data.get("raw_trial_data", {"pareto": [], "scalability": [], "budget": []})
             logger.info(f"Found existing results file. Resuming session...")
         except (json.JSONDecodeError, KeyError):
-            all_results = {"pareto": [], "budget": []}
+            all_results = {"pareto": [], "scalability": [], "budget": []}
     else:
-        all_results = {"pareto": [], "budget": []}
+        all_results = {"pareto": [], "scalability": [], "budget": []}
 
-    completed_trials = len(all_results.get("pareto", []))
+    # Use a robust key for checking completion
+    active_pillars = [k for k, v in all_results.items() if v]
+    completed_trials = len(all_results[active_pillars[0]]) if active_pillars else 0
     logger.info(f"Session Status: {completed_trials} of {CONFIG['num_trials']} trials already complete.")
     
-    # Setup Progress Bar
+    # --- Setup and run with Progress Bar ---
     progress = Progress(
         TextColumn("[bold blue]{task.description}", justify="right"),
         BarColumn(bar_width=None),
         "[progress.percentage]{task.percentage:>3.0f}%",
-        TimeRemainingColumn(),
+        "•",
         TimeElapsedColumn(),
-        console=Console(),
+        "•",
+        TimeRemainingColumn(),
     )
 
     with progress:
@@ -375,35 +391,29 @@ if __name__ == "__main__":
         
         # --- Serial Execution Loop ---
         for i in range(completed_trials, CONFIG['num_trials']):
-            trial_seed = f'{CONFIG["base_seed"]}-{i}'
-            logger.info(f"--- Starting Trial {i+1}/{CONFIG['num_trials']} (Seed: {trial_seed}) ---")
+            result = run_single_trial(i, CONFIG, progress)
             
-            trial_task = progress.add_task(f"[green]Trial {i+1}", total=2) # 2 pillars to run
+            if result:
+                if "pareto" in result: all_results["pareto"].append(result["pareto"])
+                if "scalability" in result: all_results["scalability"].append(result["scalability"])
+                if "budget" in result: all_results["budget"].append(result["budget"])
+            else:
+                # Append placeholders for failed trials
+                if CONFIG.get("pareto", {}).get("active", False): all_results["pareto"].append(None)
+                if CONFIG.get("scalability", {}).get("active", False): all_results["scalability"].append(None)
+                if CONFIG.get("budget_constrained", {}).get("active", False): all_results["budget"].append(None)
 
-            try:
-                if CONFIG["pareto"].get("active", False):
-                    all_results["pareto"].append(execute_pareto_analysis(trial_seed, CONFIG, progress, trial_task))
-                progress.update(trial_task, advance=1)
-
-                if CONFIG["budget_constrained"].get("active", False):
-                    all_results["budget"].append(execute_budget_constrained_analysis(trial_seed, CONFIG, progress, trial_task))
-                progress.update(trial_task, advance=1)
-
-            except Exception as e:
-                logger.error(f"TRIAL {i + 1} FAILED with unhandled error: {e}", exc_info=True)
-                all_results["pareto"].append(None)
-                all_results["budget"].append(None)
-            
-            # Remove the finished trial task bar
-            progress.remove_task(trial_task)
             progress.update(overall_task, advance=1)
-            
-            # --- Incremental Save after each full trial ---
+
             try:
-                clean_results_to_save = {k: [r for r in v if r is not None] for k, v in all_results.items()}
+                clean_results_to_save = {
+                    "pareto": [r for r in all_results.get("pareto", []) if r is not None],
+                    "scalability": [r for r in all_results.get("scalability", []) if r is not None],
+                    "budget": [r for r in all_results.get("budget", []) if r is not None]
+                }
                 with open(CONFIG["output_filename"], 'w') as f:
                     json.dump({"config": CONFIG, "raw_trial_data": clean_results_to_save}, f, indent=4)
-                logger.info(f"Successfully saved progress for trial {i+1}")
+                logger.info(f"Successfully saved progress to {CONFIG['output_filename']}")
             except Exception as e:
                 logger.error(f"Error saving progress after trial {i+1}: {e}")
 
