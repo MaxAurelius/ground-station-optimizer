@@ -57,7 +57,7 @@ logger.addHandler(console_handler)
 console = Console()
 
 def get_fresh_constraints():
-    """Returns the foundational constraints for an experiment."""
+    """Returns a new list of the foundational constraint objects."""
     return [
         MinContactDurationConstraint(min_duration=180.0),
         StationContactExclusionConstraint(),
@@ -94,12 +94,10 @@ def run_optimization(scenario: Scenario, contacts: dict, objective_class, constr
     }
 
 
-def run_limited_provider_benchmark(full_scenario: Scenario, all_contacts: dict, constraints_limited: list, config: dict) -> dict:
+def run_limited_provider_benchmark(full_scenario: Scenario, all_contacts: dict, config: dict) -> dict:
     """Finds the best-performing solution when restricted to only one or two providers."""
     best_result = {"data_gb": 0, "status": "untested"}
     provider_ids = [p.id for p in full_scenario.providers]
-
-    # --- THE FIX: Create fresh constraints inside the loop ---
     
     # Single-Provider Runs
     for p_id in provider_ids:
@@ -108,7 +106,7 @@ def run_limited_provider_benchmark(full_scenario: Scenario, all_contacts: dict, 
         active_provider_ids = {p.id for p in scenario_copy.providers}
         filtered_contacts = {k: v for k, v in all_contacts.items() if v.provider_id in active_provider_ids}
         
-        # Call get_fresh_constraints() here to get a new list
+        # --- THE FIX ---: Create fresh constraints inside the loop.
         constraints = get_fresh_constraints()
         constraints.append(MaxOperationalCostConstraint(value=1e9))
         result = run_optimization(scenario_copy, filtered_contacts, MaxDataDownlinkObjective(), constraints, config)
@@ -123,7 +121,7 @@ def run_limited_provider_benchmark(full_scenario: Scenario, all_contacts: dict, 
         active_provider_ids = {p.id for p in scenario_copy.providers}
         filtered_contacts = {k: v for k, v in all_contacts.items() if v.provider_id in active_provider_ids}
 
-        # Call get_fresh_constraints() again to get another new list
+        # --- THE FIX ---: Create fresh constraints inside the loop again.
         constraints = get_fresh_constraints()
         constraints.append(MaxOperationalCostConstraint(value=1e9))
         result = run_optimization(scenario_copy, filtered_contacts, MaxDataDownlinkObjective(), constraints, config)
@@ -153,6 +151,7 @@ def execute_pareto_analysis(trial_seed: str, config: dict):
     for p_base in cfg["p_base_sweep"]:
         logger.info(f"Running Pareto point with P_base = ${p_base}")
         objective = MaxDataWithOCPObjective(P_base=p_base)
+        # --- THE FIX ---: Always get a fresh constraint list for each run in the loop.
         constraints = get_fresh_constraints()
         constraints.append(MaxOperationalCostConstraint(value=1e9))
         result = run_optimization(scenario, contacts, objective, constraints, config)
@@ -183,19 +182,14 @@ def execute_scalability_analysis(trial_seed: str, config: dict):
         temp_opt.compute_contacts()
         contacts = temp_opt.contacts
         
-        # Create fresh constraints for each model run
-        constraints_limited = get_fresh_constraints()
-        constraints_limited.append(MaxOperationalCostConstraint(value=1e9))
-        
+        # --- THE FIX ---: Create separate, fresh constraint lists for each model run.
         constraints_baseline = get_fresh_constraints()
         constraints_baseline.append(MaxOperationalCostConstraint(value=1e9))
 
         constraints_ocp = get_fresh_constraints()
         constraints_ocp.append(MaxOperationalCostConstraint(value=1e9))
 
-        # --- THE FIX: Pass the 'config' dictionary to the benchmark function ---
-        res_limited = run_limited_provider_benchmark(scenario, contacts, constraints_limited, config)
-        
+        res_limited = run_limited_provider_benchmark(scenario, contacts, config)
         res_baseline = run_optimization(scenario, contacts, MaxDataDownlinkObjective(), constraints_baseline, config)
         res_ocp = run_optimization(scenario, contacts, MaxDataWithOCPObjective(P_base=cfg["ocp_p_base"]), constraints_ocp, config)
         
@@ -221,11 +215,15 @@ def execute_budget_constrained_analysis(trial_seed: str, config: dict):
     temp_opt.compute_contacts()
     contacts = temp_opt.contacts
 
-    constraints = get_fresh_constraints()
-    constraints.append(MaxOperationalCostConstraint(value=cfg["budget_usd_per_month"]))
+    # --- THE FIX ---: Create separate, fresh constraint lists for each call.
+    constraints_baseline = get_fresh_constraints()
+    constraints_baseline.append(MaxOperationalCostConstraint(value=cfg["budget_usd_per_month"]))
+    
+    constraints_ocp = get_fresh_constraints()
+    constraints_ocp.append(MaxOperationalCostConstraint(value=cfg["budget_usd_per_month"]))
 
-    res_baseline = run_optimization(scenario, contacts, MaxDataDownlinkObjective(), constraints, config)
-    res_ocp = run_optimization(scenario, contacts, MaxDataWithOCPObjective(P_base=cfg["ocp_p_base"]), constraints, config)
+    res_baseline = run_optimization(scenario, contacts, MaxDataDownlinkObjective(), constraints_baseline, config)
+    res_ocp = run_optimization(scenario, contacts, MaxDataWithOCPObjective(P_base=cfg["ocp_p_base"]), constraints_ocp, config)
     
     return {"baseline": res_baseline, "ocp": res_ocp}
 
@@ -237,7 +235,6 @@ def run_single_trial(trial_number: int, config: dict, progress):
     """
     trial_seed = f'{config["base_seed"]}-{trial_number}'
     
-    # Determine the number of active pillars for the sub-progress bar
     num_pillars_active = sum(1 for pillar in ["pareto", "scalability", "budget_constrained"] if config.get(pillar, {}).get("active", False))
     trial_task = progress.add_task(f"[green]Trial {trial_number + 1}", total=num_pillars_active)
     
@@ -264,7 +261,7 @@ def run_single_trial(trial_number: int, config: dict, progress):
     except Exception as e:
         logger.error(f"TRIAL {trial_number + 1} FAILED with an unhandled error: {e}", exc_info=True)
         progress.remove_task(trial_task)
-        return None # Return None on failure
+        return None
 
 def process_and_display_results(all_raw_results: dict):
     """Processes raw data from all trials and prints summary tables for all executed pillars."""
@@ -272,7 +269,6 @@ def process_and_display_results(all_raw_results: dict):
     # PILLAR 1: PARETO
     if all_raw_results.get("pareto") and any(all_raw_results["pareto"]):
         console.print("\n[bold]Aggregated Results: Pillar 1 - Pareto Frontier[/bold]")
-        # Filter out None values from failed trials before creating DataFrame
         pareto_data = [item for trial in all_raw_results["pareto"] if trial is not None for item in trial if item is not None]
 
         if pareto_data:
@@ -300,13 +296,12 @@ def process_and_display_results(all_raw_results: dict):
     # PILLAR 2: SCALABILITY
     if all_raw_results.get("scalability") and any(all_raw_results["scalability"]):
         console.print("\n[bold]Aggregated Results: Pillar 2 - Scalability Analysis[/bold]")
-        scalability_data = [item for trial in all_raw_results["scalability"] for item in trial if item is not None]
+        scalability_data = [item for trial in all_raw_results["scalability"] if trial is not None for item in trial]
         if scalability_data:
             df_scalability_raw = pd.DataFrame(scalability_data)
             df_scalability = pd.DataFrame()
             for model in ['limited', 'baseline', 'ocp']:
                 if model in df_scalability_raw.columns:
-                    # Unpack the nested dictionaries into prefixed columns
                     unpacked = df_scalability_raw[model].apply(pd.Series).add_prefix(f'{model}_')
                     df_scalability = pd.concat([df_scalability, unpacked], axis=1)
             df_scalability['sat_count'] = df_scalability_raw['sat_count']
@@ -392,7 +387,7 @@ if __name__ == "__main__":
         all_results = {"pareto": [], "scalability": [], "budget": []}
 
     # Use a robust key for checking completion
-    active_pillars = [k for k, v in all_results.items() if v]
+    active_pillars = [k for k, v_list in all_results.items() if v_list and any(v is not None for v in v_list)]
     completed_trials = len(all_results[active_pillars[0]]) if active_pillars else 0
     logger.info(f"Session Status: {completed_trials} of {CONFIG['num_trials']} trials already complete.")
     
@@ -428,13 +423,8 @@ if __name__ == "__main__":
             progress.update(overall_task, advance=1)
 
             try:
-                clean_results_to_save = {
-                    "pareto": [r for r in all_results.get("pareto", []) if r is not None],
-                    "scalability": [r for r in all_results.get("scalability", []) if r is not None],
-                    "budget": [r for r in all_results.get("budget", []) if r is not None]
-                }
                 with open(CONFIG["output_filename"], 'w') as f:
-                    json.dump({"config": CONFIG, "raw_trial_data": clean_results_to_save}, f, indent=4)
+                    json.dump({"config": CONFIG, "raw_trial_data": all_results}, f, indent=4)
                 logger.info(f"Successfully saved progress to {CONFIG['output_filename']}")
             except Exception as e:
                 logger.error(f"Error saving progress after trial {i+1}: {e}")
