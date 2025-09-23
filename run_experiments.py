@@ -183,21 +183,20 @@ def execute_scalability_analysis(trial_seed: str, config: dict):
         temp_opt.compute_contacts()
         contacts = temp_opt.contacts
         
-        # --- THE FIX: Create a fresh constraint list for EACH model run ---
-        
-        # Create constraints for the Limited-Provider benchmark
+        # Create fresh constraints for each model run
         constraints_limited = get_fresh_constraints()
         constraints_limited.append(MaxOperationalCostConstraint(value=1e9))
-        res_limited = run_limited_provider_benchmark(scenario, contacts, constraints_limited, config)
         
-        # Create a separate, fresh list for the Baseline model
         constraints_baseline = get_fresh_constraints()
         constraints_baseline.append(MaxOperationalCostConstraint(value=1e9))
-        res_baseline = run_optimization(scenario, contacts, MaxDataDownlinkObjective(), constraints_baseline, config)
 
-        # Create another separate, fresh list for the OCP model
         constraints_ocp = get_fresh_constraints()
         constraints_ocp.append(MaxOperationalCostConstraint(value=1e9))
+
+        # --- THE FIX: Pass the 'config' dictionary to the benchmark function ---
+        res_limited = run_limited_provider_benchmark(scenario, contacts, constraints_limited, config)
+        
+        res_baseline = run_optimization(scenario, contacts, MaxDataDownlinkObjective(), constraints_baseline, config)
         res_ocp = run_optimization(scenario, contacts, MaxDataWithOCPObjective(P_base=cfg["ocp_p_base"]), constraints_ocp, config)
         
         trial_results.append({
