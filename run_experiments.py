@@ -94,19 +94,25 @@ def run_optimization(scenario: Scenario, contacts: dict, objective_class, constr
     }
 
 
-def run_limited_provider_benchmark(full_scenario: Scenario, all_contacts: dict, constraints: list, config: dict) -> dict:
+def run_limited_provider_benchmark(full_scenario: Scenario, all_contacts: dict, config: dict) -> dict:
     """Finds the best-performing solution when restricted to only one or two providers."""
     best_result = {"data_gb": 0, "status": "untested"}
     provider_ids = [p.id for p in full_scenario.providers]
 
+    # --- THE FIX: Create fresh constraints inside the loop ---
+    
     # Single-Provider Runs
     for p_id in provider_ids:
         scenario_copy = copy.deepcopy(full_scenario)
         scenario_copy.providers = [p for p in scenario_copy.providers if p.id == p_id]
         active_provider_ids = {p.id for p in scenario_copy.providers}
         filtered_contacts = {k: v for k, v in all_contacts.items() if v.provider_id in active_provider_ids}
-        # Pass the 'config' dictionary here
+        
+        # Call get_fresh_constraints() here to get a new list
+        constraints = get_fresh_constraints()
+        constraints.append(MaxOperationalCostConstraint(value=1e9))
         result = run_optimization(scenario_copy, filtered_contacts, MaxDataDownlinkObjective(), constraints, config)
+        
         if result["data_gb"] > best_result["data_gb"]:
             best_result = result
 
@@ -116,8 +122,12 @@ def run_limited_provider_benchmark(full_scenario: Scenario, all_contacts: dict, 
         scenario_copy.providers = [p for p in scenario_copy.providers if p.id in [p1_id, p2_id]]
         active_provider_ids = {p.id for p in scenario_copy.providers}
         filtered_contacts = {k: v for k, v in all_contacts.items() if v.provider_id in active_provider_ids}
-        # Pass the 'config' dictionary here as well
+
+        # Call get_fresh_constraints() again to get another new list
+        constraints = get_fresh_constraints()
+        constraints.append(MaxOperationalCostConstraint(value=1e9))
         result = run_optimization(scenario_copy, filtered_contacts, MaxDataDownlinkObjective(), constraints, config)
+
         if result["data_gb"] > best_result["data_gb"]:
             best_result = result
             
@@ -173,11 +183,13 @@ def execute_scalability_analysis(trial_seed: str, config: dict):
         temp_opt.compute_contacts()
         contacts = temp_opt.contacts
         
+        # The benchmark function now handles its own constraints
+        res_limited = run_limited_provider_benchmark(scenario, contacts, config)
+        
+        # Create fresh constraints for the other two models
         constraints = get_fresh_constraints()
         constraints.append(MaxOperationalCostConstraint(value=1e9))
 
-        # Pass the 'config' dictionary here
-        res_limited = run_limited_provider_benchmark(scenario, contacts, constraints, config)
         res_baseline = run_optimization(scenario, contacts, MaxDataDownlinkObjective(), constraints, config)
         res_ocp = run_optimization(scenario, contacts, MaxDataWithOCPObjective(P_base=cfg["ocp_p_base"]), constraints, config)
         
@@ -255,7 +267,8 @@ def process_and_display_results(all_raw_results: dict):
     if all_raw_results.get("pareto") and any(all_raw_results["pareto"]):
         console.print("\n[bold]Aggregated Results: Pillar 1 - Pareto Frontier[/bold]")
         # Filter out None values from failed trials before creating DataFrame
-        pareto_data = [item for trial in all_raw_results["pareto"] for item in trial if item is not None]
+        pareto_data = [item for trial in all_raw_results["pareto"] if trial is not None for item in trial if item is not None]
+
         if pareto_data:
             df_pareto = pd.DataFrame(pareto_data)
             df_pareto_succ = df_pareto[df_pareto['status'] == 'optimal']
