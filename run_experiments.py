@@ -94,7 +94,7 @@ def run_optimization(scenario: Scenario, contacts: dict, objective_class, constr
     }
 
 
-def run_limited_provider_benchmark(full_scenario: Scenario, all_contacts: dict, config: dict) -> dict:
+def run_limited_provider_benchmark(full_scenario: Scenario, all_contacts: dict, constraints_limited: list, config: dict) -> dict:
     """Finds the best-performing solution when restricted to only one or two providers."""
     best_result = {"data_gb": 0, "status": "untested"}
     provider_ids = [p.id for p in full_scenario.providers]
