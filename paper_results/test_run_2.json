@@ -1,0 +1,72 @@
+{
+    "config": {
+        "optimizer_engine": "gurobi",
+        "num_trials": 2,
+        "base_seed": "final-gurobi-run-2025",
+        "output_filename": "test_run_2.json",
+        "log_filename": "simulation.log",
+        "pareto": {
+            "active": false,
+            "satellite_count": 5,
+            "p_base_sweep": [
+                0,
+                100,
+                250,
+                500,
+                1000,
+                2500
+            ]
+        },
+        "scalability": {
+            "active": false,
+            "satellite_counts": [
+                1
+            ],
+            "ocp_p_base": 500.0
+        },
+        "budget_constrained": {
+            "active": true,
+            "satellite_count": 1,
+            "budget_usd_per_month": 150000.0,
+            "ocp_p_base": 500.0
+        }
+    },
+    "raw_trial_data": {
+        "pareto": [],
+        "scalability": [],
+        "budget": [
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 437906.81454708317,
+                    "cost_monthly": 72072.91430788331,
+                    "stations": 5,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 437896.5682063141,
+                    "cost_monthly": 72072.36669660294,
+                    "stations": 5,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 1196339.232266596,
+                    "cost_monthly": 149995.63276782492,
+                    "stations": 17,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 1166238.7352366308,
+                    "cost_monthly": 149992.2355020116,
+                    "stations": 14,
+                    "providers": 7
+                }
+            }
+        ]
+    }
+}
