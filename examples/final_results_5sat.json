@@ -1,0 +1,182 @@
+{
+    "config": {
+        "optimizer_engine": "gurobi",
+        "num_trials": 3,
+        "base_seed": "final-gurobi-run-2025",
+        "output_filename": "final_results_5sat.json",
+        "log_filename": "simulation.log",
+        "pareto": {
+            "active": true,
+            "satellite_count": 3,
+            "p_base_sweep": [
+                0,
+                100,
+                250,
+                500,
+                1000,
+                2500
+            ]
+        },
+        "budget_constrained": {
+            "active": false,
+            "satellite_count": 5,
+            "budget_usd_per_month": 150000.0,
+            "ocp_p_base": 500.0
+        }
+    },
+    "raw_trial_data": {
+        "pareto": [
+            [
+                {
+                    "p_base": 0,
+                    "status": "optimal",
+                    "data_gb": 6407024.87611701,
+                    "cost_monthly": 1168734.4835852396,
+                    "stations": 90,
+                    "providers": 7
+                },
+                {
+                    "p_base": 100,
+                    "status": "optimal",
+                    "data_gb": 6385645.648955447,
+                    "cost_monthly": 1088491.6024981386,
+                    "stations": 61,
+                    "providers": 7
+                },
+                {
+                    "p_base": 250,
+                    "status": "optimal",
+                    "data_gb": 6334342.19456651,
+                    "cost_monthly": 1054226.2944966739,
+                    "stations": 50,
+                    "providers": 7
+                },
+                {
+                    "p_base": 500,
+                    "status": "optimal",
+                    "data_gb": 6237016.60927377,
+                    "cost_monthly": 1020615.2168999615,
+                    "stations": 42,
+                    "providers": 7
+                },
+                {
+                    "p_base": 1000,
+                    "status": "optimal",
+                    "data_gb": 6074795.01109124,
+                    "cost_monthly": 956550.0572620039,
+                    "stations": 34,
+                    "providers": 7
+                },
+                {
+                    "p_base": 2500,
+                    "status": "optimal",
+                    "data_gb": 5769024.14018193,
+                    "cost_monthly": 911496.5160708685,
+                    "stations": 28,
+                    "providers": 7
+                }
+            ],
+            [
+                {
+                    "p_base": 0,
+                    "status": "optimal",
+                    "data_gb": 3241222.7909018486,
+                    "cost_monthly": 853818.0663940373,
+                    "stations": 90,
+                    "providers": 7
+                },
+                {
+                    "p_base": 100,
+                    "status": "optimal",
+                    "data_gb": 3233418.8413402755,
+                    "cost_monthly": 732775.8656076638,
+                    "stations": 59,
+                    "providers": 7
+                },
+                {
+                    "p_base": 250,
+                    "status": "optimal",
+                    "data_gb": 3165786.7898595077,
+                    "cost_monthly": 634284.8400698409,
+                    "stations": 42,
+                    "providers": 7
+                },
+                {
+                    "p_base": 500,
+                    "status": "optimal",
+                    "data_gb": 3124277.966124017,
+                    "cost_monthly": 626131.0813513113,
+                    "stations": 37,
+                    "providers": 7
+                },
+                {
+                    "p_base": 1000,
+                    "status": "optimal",
+                    "data_gb": 3038063.31692238,
+                    "cost_monthly": 641147.7830658575,
+                    "stations": 31,
+                    "providers": 7
+                },
+                {
+                    "p_base": 2500,
+                    "status": "optimal",
+                    "data_gb": 2808775.307669548,
+                    "cost_monthly": 535156.7142084002,
+                    "stations": 24,
+                    "providers": 7
+                }
+            ],
+            [
+                {
+                    "p_base": 0,
+                    "status": "optimal",
+                    "data_gb": 7394678.736454768,
+                    "cost_monthly": 1123867.1687733864,
+                    "stations": 88,
+                    "providers": 7
+                },
+                {
+                    "p_base": 100,
+                    "status": "optimal",
+                    "data_gb": 7376029.844039197,
+                    "cost_monthly": 1072445.5159434543,
+                    "stations": 68,
+                    "providers": 7
+                },
+                {
+                    "p_base": 250,
+                    "status": "optimal",
+                    "data_gb": 7339673.668485798,
+                    "cost_monthly": 1051766.667107269,
+                    "stations": 61,
+                    "providers": 7
+                },
+                {
+                    "p_base": 500,
+                    "status": "optimal",
+                    "data_gb": 7281005.143994371,
+                    "cost_monthly": 1015147.6152360797,
+                    "stations": 56,
+                    "providers": 7
+                },
+                {
+                    "p_base": 1000,
+                    "status": "optimal",
+                    "data_gb": 7037068.056492764,
+                    "cost_monthly": 963862.3777985764,
+                    "stations": 46,
+                    "providers": 7
+                },
+                {
+                    "p_base": 2500,
+                    "status": "optimal",
+                    "data_gb": 6409119.997698604,
+                    "cost_monthly": 836802.6945992524,
+                    "stations": 34,
+                    "providers": 7
+                }
+            ]
+        ],
+        "budget": []
+    }
+}

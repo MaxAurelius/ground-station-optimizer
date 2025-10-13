@@ -210,10 +210,14 @@ def execute_scalability_analysis(trial_seed: str, config: dict):
 
     for sat_count in cfg["satellite_counts"]:
         logger.info(f"Running Scalability point for {sat_count} satellite(s)...")
+        
         scenario = copy.deepcopy(base_scenario_no_sats)
+        
         scengen_sats = ScenarioGenerator(opt_window, seed=f'{trial_seed}-{sat_count}')
         scengen_sats.add_random_satellites(sat_count)
-        scenario.satellites = scengen_sats.satellites
+        
+        sat_only_scenario = scengen_sats.sample_scenario()
+        scenario.satellites = sat_only_scenario.satellites
         
         temp_opt = MilpOptimizer(opt_window=scenario.opt_window)
         for sat in scenario.satellites: temp_opt.add_satellite(sat)
@@ -228,13 +232,15 @@ def execute_scalability_analysis(trial_seed: str, config: dict):
         constraints_ocp = get_fresh_constraints()
         constraints_ocp.append(MaxOperationalCostConstraint(value=1e9))
 
-        res_limited = run_limited_provider_benchmark(scenario, contacts, config)
+        #res_limited = run_limited_provider_benchmark(scenario, contacts, config)
         res_baseline = run_optimization(scenario, contacts, MaxDataDownlinkObjective(), constraints_baseline, config)
         res_ocp = run_optimization(scenario, contacts, MaxDataWithOCPObjective(P_base=cfg["ocp_p_base"]), constraints_ocp, config)
         
         trial_results.append({
-            "sat_count": sat_count, "limited": res_limited,
-            "baseline": res_baseline, "ocp": res_ocp
+            "sat_count": sat_count,
+            #"limited": res_limited,
+            "baseline": res_baseline,
+            "ocp": res_ocp
         })
     return trial_results
 

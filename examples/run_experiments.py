@@ -126,7 +126,7 @@ def execute_pareto_analysis(trial_seed: str):
     """Executes the Pareto analysis for a single trial."""
     cfg = CONFIG["pareto"]
     logger.info(f"Executing Pareto analysis with {cfg['satellite_count']} satellite(s)...")
-    opt_window = OptimizationWindow(datetime.datetime(2023, 1, 1), datetime.datetime(2024, 1, 1), datetime.datetime(2023, 1, 1), datetime.datetime(2023, 1, 8))
+    opt_window = OptimizationWindow(datetime.datetime(2025, 1, 1), datetime.datetime(2025, 1, 7), datetime.datetime(2025, 1, 1), datetime.datetime(2025, 1, 7))
     scengen = ScenarioGenerator(opt_window, seed=trial_seed)
     scengen.add_random_satellites(cfg["satellite_count"])
     scengen.add_all_providers()

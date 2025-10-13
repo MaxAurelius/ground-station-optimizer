@@ -102,9 +102,10 @@ class MaxDataDownlinkObjective(pk.block, GSOptObjective):
         """
         Generate the objective function.
         """
-
+        print("\n\n>>>> EXECUTING CORRECTED, UNSCALED OBJECTIVE V2 <<<<\n\n")
         for cn in contact_nodes.values():
             self.obj.expr += cn.var * cn.model.data_volume * opt_window.T_opt / opt_window.T_sim
+            # self.obj.expr += cn.var * cn.model.data_volume 
 
 
 class MinMaxContactGapObjective(pk.block, GSOptObjective):
@@ -201,7 +202,9 @@ class MaxDataWithOCPObjective(pk.block, GSOptObjective):
         """
         Generate the objective function with the OCP and AOFN.
         """
-
+        
+        print("\n\n>>>> EXECUTING CORRECTED, UNSCALED OBJECTIVE V2 <<<<\n\n")
+ 
         # --- 1. AOFN: Calculate the adaptive k-factor ---
         contact_efficiencies = []
         for cn in contact_nodes.values():
@@ -229,3 +232,4 @@ class MaxDataWithOCPObjective(pk.block, GSOptObjective):
         # --- 3. Set the Final Objective Expression ---
         # We scale the entire expression by T_opt/T_sim to project over the full mission
         self.obj.expr = (data_term - complexity_penalty_term) * (opt_window.T_opt / opt_window.T_sim)
+        #self.obj.expr = data_term - complexity_penalty_term

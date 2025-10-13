@@ -44,7 +44,7 @@ console = Console()
 console.print("\n[bold cyan]PHASE 1: GENERATING SCENARIO AND CONTACTS...[/bold cyan]")
 
 # OPTIMIZER SELECTION
-optimizer_engine = get_optimizer('cbc')  # 'scip', 'cbc', 'glpk', or 'gurobi'
+optimizer_engine = get_optimizer('gurobi')  # 'scip', 'cbc', 'glpk', or 'gurobi'
 
 # Define the optimization window
 opt_start = datetime.datetime(2023, 1, 1, tzinfo=datetime.timezone.utc)

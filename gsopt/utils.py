@@ -57,14 +57,21 @@ def get_last_modified_time_as_datetime(file_path):
     return datetime.datetime.fromtimestamp(get_last_modified_time(file_path))
 
 def compute_contacts(station: GroundStation, satellite: Satellite, t_start: bh.Epoch, t_end: bh.Epoch):
+
     # Convert Spacecraft and Station objects to Brahe objects
-    sc = satellite.as_brahe_model()
-    loc = station.as_brahe_model()
+    
+    try:
+        sc = satellite.as_brahe_model()
+        loc = station.as_brahe_model()
 
-    contacts = find_location_accesses(sc, loc, t_start, t_end)
+        contacts = find_location_accesses(sc, loc, t_start, t_end)
 
-    # Create contact object from Brahe Contact objects and return
-    return [Contact(c, station, satellite) for c in contacts]
+        # Create contact object from Brahe Contact objects and return
+        return [Contact(c, station, satellite) for c in contacts]
+    
+    except ValueError as e:
+        logger.warning(f"Could not compute contacts for satellite {satellite.satcat_id} ({satellite.name}). Skipping. Reason: {e}")
+        return []
 
 def get_time_string(t: float) -> str:
     """

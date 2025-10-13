@@ -98,3 +98,5 @@ console.print(optimizer)
 
 # Save the plot of the optimized contacts
 optimizer.save_plot('max_data_opt_selected_stations.png')
+
+optimizer.write_solution('max_data_opt_solution')
