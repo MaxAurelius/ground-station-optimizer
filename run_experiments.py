@@ -83,20 +83,13 @@ def run_optimization(scenario: Scenario, contacts: dict, objective_class, constr
         logger.warning(f"Solver returned non-optimal status: {status}")
         return { "status": status, "data_gb": 0, "cost_monthly": 0, "stations": 0, "providers": 0 }
 
-    # --- THE FIX ---
-    # 1. Get the TRUE objective value (in bits) directly from the solver.
-    #    This value is already correctly scaled ONCE by the objective function.
-    objective_value_bits = optimizer.obj_block.obj()
+   objective_value_bits = optimizer.obj_block.obj()
     
-    # 2. Convert it to Gigabytes (GB).
-    #    DataUnits.GB.value is 8e9.
-    correct_data_gb = objective_value_bits / (8 * 1e9)
+   correct_data_gb = objective_value_bits / (8 * 1e9)
 
-    # 3. We still call get_solution() to conveniently get cost, station, and provider counts.
     solution = optimizer.get_solution()
     stats = solution['statistics']
 
-    # 4. Return the results, but OVERWRITE the flawed data_gb from get_solution() with our correct one.
     return {
         "status": status,
         "data_gb": correct_data_gb, # <-- Using the correct, directly-sourced value
@@ -104,34 +97,6 @@ def run_optimization(scenario: Scenario, contacts: dict, objective_class, constr
         "stations": len(solution['selected_stations']),
         "providers": len(solution['selected_providers']),
     }
-
-# def run_optimization(scenario: Scenario, contacts: dict, objective_class, constraints: list, config: dict) -> dict:
-#     """Helper function to run a single optimization instance and return key results."""
-#     optimizer_enum = get_optimizer(config["optimizer_engine"])
-#     optimizer = MilpOptimizer(opt_window=scenario.opt_window, optimizer=optimizer_enum)
-    
-#     for sat in scenario.satellites: optimizer.add_satellite(sat)
-#     for prov in scenario.providers: optimizer.add_provider(prov)
-
-#     optimizer.contacts = contacts
-#     optimizer.set_objective(objective_class)
-#     optimizer.add_constraints(constraints)
-#     optimizer.solve()
-    
-#     status = optimizer.solver_status.lower()
-#     if status != 'optimal':
-#         logger.warning(f"Solver returned non-optimal status: {status}")
-#         return { "status": status, "data_gb": 0, "cost_monthly": 0, "stations": 0, "providers": 0 }
-
-#     solution = optimizer.get_solution()
-#     stats = solution['statistics']
-#     return {
-#         "status": status, "data_gb": stats['data_downlinked']['total_GB'],
-#         "cost_monthly": stats['costs']['monthly_operational'],
-#         "stations": len(solution['selected_stations']),
-#         "providers": len(solution['selected_providers']),
-#     }
-
 
 def run_limited_provider_benchmark(full_scenario: Scenario, all_contacts: dict, config: dict) -> dict:
     """Finds the best-performing solution when restricted to only one or two providers."""
@@ -145,7 +110,6 @@ def run_limited_provider_benchmark(full_scenario: Scenario, all_contacts: dict, 
         active_provider_ids = {p.id for p in scenario_copy.providers}
         filtered_contacts = {k: v for k, v in all_contacts.items() if v.provider_id in active_provider_ids}
         
-        # --- THE FIX ---: Create fresh constraints inside the loop.
         constraints = get_fresh_constraints()
         constraints.append(MaxOperationalCostConstraint(value=1e9))
         result = run_optimization(scenario_copy, filtered_contacts, MaxDataDownlinkObjective(), constraints, config)
