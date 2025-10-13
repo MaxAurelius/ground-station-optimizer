@@ -1,0 +1,1130 @@
+{
+    "config": {
+        "optimizer_engine": "gurobi",
+        "num_trials": 100,
+        "base_seed": "final-gurobi-run-2025-1",
+        "output_filename": "budget_sim_n100_s5_225k_v2.json",
+        "log_filename": "simulation.log",
+        "pareto": {
+            "active": false,
+            "satellite_count": 5,
+            "p_base_sweep": [
+                0,
+                100,
+                250,
+                500,
+                1000,
+                2500
+            ]
+        },
+        "scalability": {
+            "active": false,
+            "satellite_counts": [
+                1
+            ],
+            "ocp_p_base": 500.0
+        },
+        "budget_constrained": {
+            "active": true,
+            "satellite_count": 5,
+            "budget_usd_per_month": 225000.0,
+            "ocp_p_base": 500.0
+        }
+    },
+    "raw_trial_data": {
+        "pareto": [],
+        "scalability": [],
+        "budget": [
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3432898.419165778,
+                    "cost_monthly": 224996.0618193088,
+                    "stations": 11,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3284367.440005591,
+                    "cost_monthly": 224995.44974958844,
+                    "stations": 10,
+                    "providers": 7
+                }
+            },
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3344269.994131688,
+                    "cost_monthly": 224995.12014931382,
+                    "stations": 7,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3238966.673464594,
+                    "cost_monthly": 224995.12014931382,
+                    "stations": 7,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3558567.0323709114,
+                    "cost_monthly": 224981.5137787116,
+                    "stations": 17,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3319744.394758663,
+                    "cost_monthly": 224988.68335654342,
+                    "stations": 14,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3940787.6554448283,
+                    "cost_monthly": 224982.67122609608,
+                    "stations": 15,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3699455.0992166507,
+                    "cost_monthly": 224986.76142600132,
+                    "stations": 14,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3079055.1346565313,
+                    "cost_monthly": 224950.6483459439,
+                    "stations": 11,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 2888175.4343347917,
+                    "cost_monthly": 224983.24633091988,
+                    "stations": 11,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 4916388.585694434,
+                    "cost_monthly": 224985.91241845035,
+                    "stations": 14,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 4651945.416363109,
+                    "cost_monthly": 224985.91241845035,
+                    "stations": 14,
+                    "providers": 7
+                }
+            },
+            null,
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 5382498.641009717,
+                    "cost_monthly": 224997.36497042724,
+                    "stations": 13,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 5158090.875472969,
+                    "cost_monthly": 224994.53993039404,
+                    "stations": 12,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3342663.278851247,
+                    "cost_monthly": 224993.60748023345,
+                    "stations": 11,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3202948.460404786,
+                    "cost_monthly": 224987.39905994176,
+                    "stations": 10,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 5032284.648893704,
+                    "cost_monthly": 224975.30582012737,
+                    "stations": 14,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 4785472.685897599,
+                    "cost_monthly": 224995.44702945263,
+                    "stations": 13,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 4123237.247960827,
+                    "cost_monthly": 224997.27919951003,
+                    "stations": 12,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3941069.879985402,
+                    "cost_monthly": 224988.7740023875,
+                    "stations": 12,
+                    "providers": 7
+                }
+            },
+            null,
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 5355083.945806243,
+                    "cost_monthly": 224997.0153231468,
+                    "stations": 15,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 5099690.345154586,
+                    "cost_monthly": 224997.07490067137,
+                    "stations": 14,
+                    "providers": 7
+                }
+            },
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3918780.5137159666,
+                    "cost_monthly": 224991.74758616503,
+                    "stations": 10,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3775516.579602663,
+                    "cost_monthly": 224991.74758616503,
+                    "stations": 10,
+                    "providers": 7
+                }
+            },
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 4822909.636810151,
+                    "cost_monthly": 224984.0853806782,
+                    "stations": 15,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 4600466.185953182,
+                    "cost_monthly": 224986.10582793807,
+                    "stations": 14,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 4251908.976709378,
+                    "cost_monthly": 224990.83811958967,
+                    "stations": 12,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 4065091.722308543,
+                    "cost_monthly": 224997.57577079386,
+                    "stations": 12,
+                    "providers": 7
+                }
+            },
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3562207.6402373514,
+                    "cost_monthly": 224999.76405798862,
+                    "stations": 10,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3422965.4544729455,
+                    "cost_monthly": 224996.1609015131,
+                    "stations": 10,
+                    "providers": 7
+                }
+            },
+            null,
+            null,
+            null,
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3848303.7998608183,
+                    "cost_monthly": 224979.69085233685,
+                    "stations": 13,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3639101.2154939044,
+                    "cost_monthly": 224987.4160874869,
+                    "stations": 12,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 2505489.5374771305,
+                    "cost_monthly": 224992.90230723136,
+                    "stations": 12,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 2359293.0065180217,
+                    "cost_monthly": 224992.69193939996,
+                    "stations": 11,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 5022357.889267185,
+                    "cost_monthly": 224997.21271951683,
+                    "stations": 13,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 4809107.042462822,
+                    "cost_monthly": 224975.9510719556,
+                    "stations": 12,
+                    "providers": 7
+                }
+            },
+            null,
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 4695025.594424487,
+                    "cost_monthly": 224998.29436630796,
+                    "stations": 16,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 4442206.906497163,
+                    "cost_monthly": 224999.45803318275,
+                    "stations": 15,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3933658.220401891,
+                    "cost_monthly": 224975.5353957288,
+                    "stations": 13,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3767462.2076694076,
+                    "cost_monthly": 224994.5832690478,
+                    "stations": 11,
+                    "providers": 7
+                }
+            },
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 2818875.8395041623,
+                    "cost_monthly": 224995.18816140757,
+                    "stations": 13,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 2635499.521870546,
+                    "cost_monthly": 224991.95018482974,
+                    "stations": 13,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 2320098.00434433,
+                    "cost_monthly": 224990.31079112916,
+                    "stations": 16,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 2097860.100096369,
+                    "cost_monthly": 224987.52110827804,
+                    "stations": 14,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 2515434.712651914,
+                    "cost_monthly": 224997.6591419475,
+                    "stations": 16,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 2320618.7752231304,
+                    "cost_monthly": 224999.80613808133,
+                    "stations": 14,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 2620480.7273641205,
+                    "cost_monthly": 224994.7846497888,
+                    "stations": 14,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 2460281.3093710286,
+                    "cost_monthly": 224968.03390682602,
+                    "stations": 13,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3452467.256485198,
+                    "cost_monthly": 224996.58847189334,
+                    "stations": 12,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3308819.087581408,
+                    "cost_monthly": 224987.87838527004,
+                    "stations": 11,
+                    "providers": 7
+                }
+            },
+            null,
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 4276229.441128059,
+                    "cost_monthly": 224999.5382113796,
+                    "stations": 15,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 4048257.273757598,
+                    "cost_monthly": 224995.65106073435,
+                    "stations": 14,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3787017.883702017,
+                    "cost_monthly": 224996.2703389495,
+                    "stations": 11,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3609771.321457167,
+                    "cost_monthly": 224996.2719978681,
+                    "stations": 11,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3221128.1554921796,
+                    "cost_monthly": 224993.9824382732,
+                    "stations": 12,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3060252.887760143,
+                    "cost_monthly": 224994.12748534308,
+                    "stations": 11,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 4662520.385330158,
+                    "cost_monthly": 224989.70913593617,
+                    "stations": 12,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 4467026.539859384,
+                    "cost_monthly": 224989.14962523658,
+                    "stations": 11,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 4170076.188816504,
+                    "cost_monthly": 224995.44913547084,
+                    "stations": 16,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3872299.611912382,
+                    "cost_monthly": 224994.63333293376,
+                    "stations": 15,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 4125661.03332218,
+                    "cost_monthly": 224985.42471867453,
+                    "stations": 15,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3904239.8035266777,
+                    "cost_monthly": 224985.42471867453,
+                    "stations": 15,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "infeasible",
+                    "data_gb": 0,
+                    "cost_monthly": 0,
+                    "stations": 0,
+                    "providers": 0
+                },
+                "ocp": {
+                    "status": "infeasible",
+                    "data_gb": 0,
+                    "cost_monthly": 0,
+                    "stations": 0,
+                    "providers": 0
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 4718322.77055619,
+                    "cost_monthly": 224999.5700742372,
+                    "stations": 12,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 4509300.10403363,
+                    "cost_monthly": 224991.93468341426,
+                    "stations": 12,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 4125156.7720549516,
+                    "cost_monthly": 224997.85891812798,
+                    "stations": 19,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3852384.1652936847,
+                    "cost_monthly": 224993.63352564292,
+                    "stations": 17,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 4290160.409821316,
+                    "cost_monthly": 224997.5377611731,
+                    "stations": 14,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 4085505.461720706,
+                    "cost_monthly": 224993.42886922896,
+                    "stations": 14,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3227235.4396126913,
+                    "cost_monthly": 224979.42993119874,
+                    "stations": 14,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3038487.435369685,
+                    "cost_monthly": 224992.0847143287,
+                    "stations": 12,
+                    "providers": 7
+                }
+            },
+            null,
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 4024800.4037610744,
+                    "cost_monthly": 224997.1324404259,
+                    "stations": 17,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3754318.5384353683,
+                    "cost_monthly": 224995.46648139556,
+                    "stations": 16,
+                    "providers": 7
+                }
+            },
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3438288.8927403237,
+                    "cost_monthly": 224997.16780118135,
+                    "stations": 12,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3267272.6125964727,
+                    "cost_monthly": 224997.60441914576,
+                    "stations": 11,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 4015929.952390239,
+                    "cost_monthly": 224995.19063963712,
+                    "stations": 11,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3863817.730661754,
+                    "cost_monthly": 224995.19063963712,
+                    "stations": 11,
+                    "providers": 7
+                }
+            },
+            null,
+            null,
+            {
+                "baseline": {
+                    "status": "infeasible",
+                    "data_gb": 0,
+                    "cost_monthly": 0,
+                    "stations": 0,
+                    "providers": 0
+                },
+                "ocp": {
+                    "status": "infeasible",
+                    "data_gb": 0,
+                    "cost_monthly": 0,
+                    "stations": 0,
+                    "providers": 0
+                }
+            },
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3360345.544821568,
+                    "cost_monthly": 224985.31931049007,
+                    "stations": 15,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3178572.343702702,
+                    "cost_monthly": 224981.32347989464,
+                    "stations": 14,
+                    "providers": 7
+                }
+            },
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 2721179.883666709,
+                    "cost_monthly": 224996.84443300596,
+                    "stations": 10,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 2609180.4722251687,
+                    "cost_monthly": 224999.46926694407,
+                    "stations": 10,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 2092282.5099180865,
+                    "cost_monthly": 224990.1034564499,
+                    "stations": 15,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 1900756.0975488496,
+                    "cost_monthly": 224994.33422289352,
+                    "stations": 13,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3830514.0093025365,
+                    "cost_monthly": 224996.30076572948,
+                    "stations": 15,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3616036.146520019,
+                    "cost_monthly": 224999.44439329836,
+                    "stations": 15,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3325613.331246682,
+                    "cost_monthly": 224993.59627301872,
+                    "stations": 11,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3169221.1880466323,
+                    "cost_monthly": 224993.59627301872,
+                    "stations": 11,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3652200.2248408664,
+                    "cost_monthly": 224995.93555082026,
+                    "stations": 12,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3506231.8199062715,
+                    "cost_monthly": 224988.7292894075,
+                    "stations": 10,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3207184.799828974,
+                    "cost_monthly": 224991.68601050458,
+                    "stations": 13,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3013478.6054755356,
+                    "cost_monthly": 224998.2156409432,
+                    "stations": 12,
+                    "providers": 7
+                }
+            },
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3184996.4627121603,
+                    "cost_monthly": 224998.70345044578,
+                    "stations": 13,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3018817.713054206,
+                    "cost_monthly": 224985.72710922477,
+                    "stations": 12,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3745855.4761936064,
+                    "cost_monthly": 224998.65744572994,
+                    "stations": 11,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3584899.1514972337,
+                    "cost_monthly": 224997.9711302743,
+                    "stations": 11,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3455878.995765162,
+                    "cost_monthly": 224974.60744118397,
+                    "stations": 11,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3308466.076366311,
+                    "cost_monthly": 224996.47897641148,
+                    "stations": 10,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3763204.0794249433,
+                    "cost_monthly": 224991.95505871726,
+                    "stations": 11,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3613842.3715264103,
+                    "cost_monthly": 224998.78155331867,
+                    "stations": 11,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 4535456.693817614,
+                    "cost_monthly": 224989.36754130697,
+                    "stations": 15,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 4328378.751603335,
+                    "cost_monthly": 224986.6542132369,
+                    "stations": 14,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 4653599.368926407,
+                    "cost_monthly": 224984.1412443463,
+                    "stations": 11,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 4507366.29151938,
+                    "cost_monthly": 224992.85865990075,
+                    "stations": 10,
+                    "providers": 7
+                }
+            },
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 4247212.101597417,
+                    "cost_monthly": 224999.2672011058,
+                    "stations": 13,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 4064717.201050311,
+                    "cost_monthly": 224973.12910194902,
+                    "stations": 11,
+                    "providers": 7
+                }
+            },
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 4206700.867128623,
+                    "cost_monthly": 224996.999286635,
+                    "stations": 12,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 4035199.6064561275,
+                    "cost_monthly": 224990.50467822695,
+                    "stations": 11,
+                    "providers": 7
+                }
+            },
+            null,
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3751491.820504017,
+                    "cost_monthly": 224972.52073779574,
+                    "stations": 11,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3597897.611178508,
+                    "cost_monthly": 224993.91780975007,
+                    "stations": 10,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3722289.9466572246,
+                    "cost_monthly": 224997.04651460503,
+                    "stations": 16,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3460117.2755115945,
+                    "cost_monthly": 224998.52002190976,
+                    "stations": 15,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 2701305.7042374425,
+                    "cost_monthly": 224966.8170240205,
+                    "stations": 11,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 2559853.9240777846,
+                    "cost_monthly": 224977.39475077318,
+                    "stations": 9,
+                    "providers": 7
+                }
+            },
+            null,
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3693729.7784618456,
+                    "cost_monthly": 224981.17444791002,
+                    "stations": 12,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3531676.66136041,
+                    "cost_monthly": 224993.60591863707,
+                    "stations": 10,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 2854341.874051639,
+                    "cost_monthly": 224995.3374814011,
+                    "stations": 16,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 2685117.192617133,
+                    "cost_monthly": 224974.29944778673,
+                    "stations": 14,
+                    "providers": 7
+                }
+            },
+            null,
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3822332.326197176,
+                    "cost_monthly": 224984.57151877927,
+                    "stations": 14,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3625311.201225229,
+                    "cost_monthly": 224991.20218506642,
+                    "stations": 13,
+                    "providers": 7
+                }
+            },
+            null,
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 4144202.037274752,
+                    "cost_monthly": 224996.84637088017,
+                    "stations": 16,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3876090.576682047,
+                    "cost_monthly": 224994.88646285044,
+                    "stations": 15,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 3674063.8736144933,
+                    "cost_monthly": 224987.99346222993,
+                    "stations": 12,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 3486298.65231405,
+                    "cost_monthly": 224999.74291614132,
+                    "stations": 12,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 4726888.104965884,
+                    "cost_monthly": 224999.98655352052,
+                    "stations": 14,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 4459830.038589397,
+                    "cost_monthly": 224985.23496973768,
+                    "stations": 14,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "optimal",
+                    "data_gb": 2446378.088366031,
+                    "cost_monthly": 224996.6940609275,
+                    "stations": 15,
+                    "providers": 7
+                },
+                "ocp": {
+                    "status": "optimal",
+                    "data_gb": 2274699.940533517,
+                    "cost_monthly": 224996.77181095676,
+                    "stations": 14,
+                    "providers": 7
+                }
+            },
+            {
+                "baseline": {
+                    "status": "infeasible",
+                    "data_gb": 0,
+                    "cost_monthly": 0,
+                    "stations": 0,
+                    "providers": 0
+                },
+                "ocp": {
+                    "status": "infeasible",
+                    "data_gb": 0,
+                    "cost_monthly": 0,
+                    "stations": 0,
+                    "providers": 0
+                }
+            }
+        ]
+    }
+}

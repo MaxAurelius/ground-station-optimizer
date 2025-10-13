@@ -233,3 +233,4 @@ class MaxDataWithOCPObjective(pk.block, GSOptObjective):
         # We scale the entire expression by T_opt/T_sim to project over the full mission
         self.obj.expr = (data_term - complexity_penalty_term) * (opt_window.T_opt / opt_window.T_sim)
         #self.obj.expr = data_term - complexity_penalty_term
+

@@ -225,20 +225,17 @@ def execute_scalability_analysis(trial_seed: str, config: dict):
         temp_opt.compute_contacts()
         contacts = temp_opt.contacts
         
-        # --- THE FIX ---: Create separate, fresh constraint lists for each model run.
         constraints_baseline = get_fresh_constraints()
         constraints_baseline.append(MaxOperationalCostConstraint(value=1e9))
 
         constraints_ocp = get_fresh_constraints()
         constraints_ocp.append(MaxOperationalCostConstraint(value=1e9))
 
-        #res_limited = run_limited_provider_benchmark(scenario, contacts, config)
         res_baseline = run_optimization(scenario, contacts, MaxDataDownlinkObjective(), constraints_baseline, config)
         res_ocp = run_optimization(scenario, contacts, MaxDataWithOCPObjective(P_base=cfg["ocp_p_base"]), constraints_ocp, config)
         
         trial_results.append({
             "sat_count": sat_count,
-            #"limited": res_limited,
             "baseline": res_baseline,
             "ocp": res_ocp
         })
